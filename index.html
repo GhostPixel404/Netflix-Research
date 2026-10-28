@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0c0f">
+<meta name="description" content="An interactive student research experience about Netflix, artificial intelligence, and the choice between Brazil and India. Explore the evidence, compare markets, and test a hypothetical strategy.">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>NEXTPLAY — Netflix’s next move in AI</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0c0f'/%3E%3Cpath d='M20 15h8l16 34h-8zM20 15h8v34h-8zM36 15h8v34h-8z' fill='%23fa4b58'/%3E%3C/svg%3E">
+<style>/* NEXTPLAY — self-contained, responsive research experience. No external fonts. */
+:root{--bg:#0b0c0f;--panel:#14151a;--panel-2:#1a1b21;--line:#2b2c34;--muted:#a6a7b3;--ink:#f4f2ef;--red:#fa4b58;--red-strong:#e6293c;--lime:#d3e7aa;--blue:#93c6ef;--gold:#edc184;--r:18px;--mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button,a,input{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button,a{touch-action:manipulation}button:disabled{cursor:default}a{color:inherit;text-decoration:none}button{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:5px}::selection{background:#b1283d;color:white}h1,h2,h3,h4,p{margin:0}h1,h2,h3,h4{line-height:1.13;font-weight:680}button{border:0;background:none}svg{display:block}section{scroll-margin-top:100px}hr{border:0;border-top:1px solid var(--line)}.wrap{width:min(1200px,calc(100% - 88px));margin:0 auto}.mono,.eyebrow,.label{font-family:var(--mono)}.eyebrow{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}.eyebrow .index{color:var(--red)}.muted{color:var(--muted)}.small{font-size:13px;line-height:1.65}.tiny{font-size:11px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip{position:fixed;top:-100px;left:20px;background:var(--ink);color:var(--bg);padding:12px 20px;z-index:100}.skip:focus{top:12px}.section{padding:88px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:36px;margin-bottom:34px}.section-head h2{font-size:clamp(30px,3.5vw,46px);letter-spacing:-.055em;margin-top:16px;max-width:720px}.section-head>p{max-width:330px;color:var(--muted);font-size:14px;line-height:1.7}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:6px 12px;font-family:var(--mono);font-size:10px;letter-spacing:.045em}.pill .dot,.status-dot{width:6px;height:6px;background:var(--lime);border-radius:50%;display:inline-block}.badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:4px;color:var(--lime);background:#243021}.badge.analysis{background:#262530;color:#d4c6e9}.badge.assumption{background:#332a20;color:var(--gold)}.btn{display:inline-flex;justify-content:center;align-items:center;gap:13px;padding:13px 21px;border-radius:8px;border:1px solid var(--line);font-size:13px;font-weight:650;line-height:1.5;transition:background .18s,border-color .18s,transform .18s}.btn:hover{background:#23242b;border-color:#62636e;transform:translateY(-1px)}.btn.primary{background:var(--red-strong);border-color:var(--red-strong);color:#fff}.btn.primary:hover{background:#fa354a;border-color:#fa354a}.btn.light{background:var(--ink);color:#15151a;border-color:var(--ink)}.btn.light:hover{background:#fff}.btn.small-btn{padding:9px 14px;font-size:12px}.btn .arrow{font-size:18px;line-height:1}.text-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13px}.text-link:hover{color:var(--red)}.chip{display:inline-flex;align-items:center;gap:5px;font-size:11px;line-height:1.4;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:4px 7px}.chip:hover{border-color:var(--red);color:var(--ink)}.source-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:20px}.source-row>.label{font-size:10px;color:var(--muted);margin-right:4px}.section-note{font-size:12px;color:var(--muted);margin-top:20px;max-width:950px;line-height:1.7}.line-note{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin-top:22px}.line-note strong{color:var(--ink);font-weight:550}.control-hint{color:var(--muted);font-size:11px;font-family:var(--mono);letter-spacing:.025em}.show-on-print{display:none}[hidden]{display:none!important}
+/* Navigation */
+.header{height:80px;position:sticky;top:0;z-index:30;border-bottom:1px solid #ffffff12;background:#0b0c0fed;backdrop-filter:blur(18px)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:27px;height:29px;position:relative;display:inline-flex;align-items:center;justify-content:center;background:var(--red-strong);color:#fff;font-size:19px;font-weight:900;letter-spacing:-4px;padding-right:4px;transform:skew(-7deg);border-radius:2px}.brand-word{font-size:18px;font-weight:800;letter-spacing:-.045em}.brand-word span{color:var(--red)}.brand-sub{display:block;font-size:8px;font-family:var(--mono);letter-spacing:.14em;color:var(--muted);line-height:1.3;margin-top:1px}.nav-links{display:flex;gap:27px;align-items:center}.nav-links>a{font-size:12px;color:var(--muted);transition:color .2s}.nav-links>a:hover,.nav-links>a.active{color:var(--ink)}.nav-links>a:last-child{color:var(--ink);border:1px solid var(--line);padding:7px 13px;border-radius:6px}.menu-toggle{display:none;border:1px solid var(--line);border-radius:6px;padding:7px 11px;font-size:12px}.reading-progress{height:2px;position:absolute;bottom:-1px;left:0;width:0;background:var(--red)}
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:64px 0 0}.hero::before{content:"";position:absolute;width:700px;height:700px;right:-240px;top:-200px;background:radial-gradient(circle,#6e142a30,transparent 66%);pointer-events:none}.hero-topline{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:40px}.hero-topline .issue{color:var(--muted);font-size:10px;letter-spacing:.08em;font-family:var(--mono)}.hero-grid{display:grid;grid-template-columns:1.09fr 1fr;gap:74px;align-items:center}.hero h1{font-size:clamp(54px,6.5vw,86px);font-weight:750;line-height:1.02;letter-spacing:-.075em;max-width:620px}.hero h1 em{color:var(--red);font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.065em}.hero-copy>p{color:var(--muted);font-size:16px;max-width:460px;line-height:1.8;margin-top:25px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:30px 0 21px}.hero-footnote{color:#9495a2;font-size:10px;font-family:var(--mono)}.hero-console{position:relative;background:linear-gradient(145deg,#1b1a22,#101115 58%);border:1px solid #36323b;border-radius:16px;box-shadow:0 30px 95px #0008;min-height:405px;padding:24px;isolation:isolate}.console-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:15px;border-bottom:1px solid #ffffff12;font-size:9px;font-family:var(--mono);color:var(--muted);letter-spacing:.1em}.console-top .live{color:var(--lime);display:flex;align-items:center;gap:6px}.console-art{height:147px;position:relative;margin:10px 0;display:flex;align-items:center;justify-content:center}.orbit{width:155px;height:155px;border:1px solid #e54a5b55;border-radius:50%;position:absolute;box-shadow:0 0 65px #e6293c18,inset 0 0 50px #e6293c08}.orbit::before,.orbit::after{content:"";position:absolute;border:1px solid #e54a5b30;border-radius:50%;inset:19px -35px;transform:rotate(-32deg)}.orbit::after{inset:-20px 34px;transform:rotate(-32deg)}.art-grid{position:absolute;inset:0;background-image:linear-gradient(#ffffff04 1px,transparent 1px),linear-gradient(90deg,#ffffff04 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(ellipse,#000 20%,transparent 75%)}.console-play{position:relative;width:65px;height:65px;background:linear-gradient(130deg,#f54251,#ab172a);border:1px solid #ff6b76;border-radius:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 40px #f5364b33;transform:rotate(-8deg)}.console-play svg{transform:rotate(8deg)}.signal{position:absolute;border:1px solid #3c3a45;border-radius:7px;padding:7px 10px;background:#14141bcc;font-size:10px;font-family:var(--mono);box-shadow:0 5px 25px #0005}.signal.left{left:10px;top:36px;color:var(--lime);transform:rotate(-5deg)}.signal.right{right:1px;bottom:28px;color:var(--blue);transform:rotate(5deg)}.console-title{font-size:28px;letter-spacing:-.055em;margin-top:8px}.console-desc{color:var(--muted);font-size:12px;max-width:360px;margin-top:9px}.console-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:20px;padding-top:16px;border-top:1px solid var(--line)}.console-bottom .tiny{color:var(--muted);font-family:var(--mono)}.console-bottom .text-link{font-size:11px;color:var(--ink)}.hero-strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:58px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.verdict{padding:25px 26px;display:flex;gap:16px;align-items:flex-start}.verdict:first-child{padding-left:0}.verdict+.verdict{border-left:1px solid var(--line)}.verdict-no{font-family:var(--mono);font-size:10px;color:#81828f;margin-top:4px}.verdict h3{font-size:15px;margin-top:6px;letter-spacing:-.01em}.verdict .label{font-size:9px;text-transform:uppercase;letter-spacing:.12em}.green{color:var(--lime)}.gold{color:var(--gold)}.red{color:var(--red)}.legend{display:flex;gap:20px;align-items:center;flex-wrap:wrap;padding:17px 0;font-size:10px;color:var(--muted)}.legend span{display:flex;gap:7px;align-items:center}.legend b{font-weight:400;font-family:var(--mono)}.legend i{width:5px;height:5px;border-radius:50%;background:var(--lime)}.legend .analysis-dot{background:#c6b2e1}.legend .assumption-dot{background:var(--gold)}
+/* Economic lenses */
+.econ-tabs{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:18px}.econ-tab{text-align:left;padding:19px 20px;border-right:1px solid var(--line);background:#101115;transition:background .2s;position:relative}.econ-tab:last-child{border-right:0}.econ-tab:hover{background:#1c1b22}.econ-tab[aria-selected=true]{background:#26171d}.econ-tab[aria-selected=true]::after{content:"";position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red)}.econ-tab span{font-family:var(--mono);font-size:9px;color:var(--muted);display:block;margin-bottom:7px}.econ-tab strong{font-size:13px;font-weight:550}.econ-tab[aria-selected=true] span{color:var(--red)}.econ-panel{display:grid;grid-template-columns:1.18fr 1fr;border:1px solid var(--line);background:var(--panel);border-radius:var(--r);overflow:hidden;min-height:355px}.econ-story{padding:34px}.econ-story h3{font-size:28px;letter-spacing:-.045em;margin:16px 0 15px}.econ-story p{font-size:14px;color:var(--muted);line-height:1.8}.econ-story .interpretation{margin-top:18px;color:var(--ink)}.econ-story .interpretation strong{color:var(--red);font-weight:550}.econ-visual{padding:34px;background:#101115;border-left:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}.flow-step{padding:13px 15px;border:1px solid #35343e;border-radius:8px;display:flex;align-items:center;gap:15px;background:linear-gradient(100deg,#1c1d23,#14151b)}.flow-step .step-num{font-family:var(--mono);font-size:10px;color:var(--red);border:1px solid #68303b;border-radius:50%;width:26px;height:26px;flex-shrink:0;display:grid;place-items:center}.flow-step h4{font-size:13px;font-weight:600}.flow-step p{color:var(--muted);font-size:11px;margin-top:3px}.flow-arrow{height:23px;display:grid;place-items:center;color:#777782;font-size:14px}.caution{margin-top:20px;font-size:12px;line-height:1.7;color:var(--muted);padding-left:13px;border-left:2px solid var(--gold)}.caution strong{color:var(--gold);font-weight:550}
+/* Competitors */
+.competitor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.competitor-card{border:1px solid var(--line);border-radius:12px;text-align:left;padding:25px;background:#111217;position:relative;transition:background .2s,border-color .2s}.competitor-card:hover{background:#191a20}.competitor-card[aria-pressed=true]{border-color:var(--red);background:linear-gradient(130deg,#2b171d,#16151a)}.competitor-card[data-company=amazon][aria-pressed=true]{border-color:var(--blue);background:linear-gradient(130deg,#172a37,#15171c)}.competitor-card[data-company=disney][aria-pressed=true]{border-color:var(--gold);background:linear-gradient(130deg,#30271c,#18171a)}.brand-name{font-size:28px;font-weight:750;letter-spacing:-.06em;line-height:1.2}.brand-name.netflix{color:var(--red)}.brand-name.amazon{color:var(--blue)}.brand-name.disney{color:var(--gold);font-family:Georgia,serif;font-style:italic}.competitor-card p{font-size:12px;color:var(--muted);margin:13px 0 20px}.competitor-card .corner-arrow{position:absolute;top:24px;right:23px;color:var(--muted);font-size:20px}.competitor-card .label{font-size:9px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}.rival-details{margin-top:20px;border-radius:12px;background:var(--panel);border:1px solid var(--line);padding:25px 30px;display:grid;grid-template-columns:1fr 1fr;gap:35px}.rival-details h4{font-size:10px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}.rival-details p{font-size:14px;line-height:1.75}.rival-details .source-row{margin-top:16px}
+/* Ecosystem */
+.ecosystem-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:22px}.ecosystem-map{border:1px solid var(--line);border-radius:var(--r);position:relative;background:radial-gradient(ellipse at 50% 50%,#321922 0,#13141a 55%,#101115 100%);min-height:440px;overflow:hidden}.map-grid{position:absolute;inset:0;background-image:radial-gradient(#ffffff14 1px,transparent 1px);background-size:19px 19px;mask-image:radial-gradient(ellipse,#000,transparent 85%)}.map-lines{position:absolute;inset:0;width:100%;height:100%;color:#4a3d48}.map-lines line{stroke:currentColor;stroke-width:1.3;stroke-dasharray:4 5;vector-effect:non-scaling-stroke}.map-ring{position:absolute;left:50%;top:50%;width:200px;height:200px;transform:translate(-50%,-50%);border-radius:50%;border:1px solid #e3344a19;box-shadow:0 0 0 30px #e3344a05}.hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:102px;height:102px;border-radius:50%;background:#210e15;border:1px solid #9c2b40;display:flex;align-items:center;justify-content:center;flex-direction:column;box-shadow:0 0 55px #e6293c20}.hub strong{font-size:20px;font-weight:800;letter-spacing:-.07em;color:var(--red)}.hub small{font-size:8px;color:var(--muted);font-family:var(--mono);letter-spacing:.07em;margin-top:3px}.eco-node{position:absolute;transform:translate(-50%,-50%);min-width:128px;padding:13px 16px;border:1px solid #3b3a43;border-radius:10px;background:#181920;text-align:left;box-shadow:0 6px 18px #0003;transition:background .2s,border-color .2s}.eco-node:hover{border-color:#8c7f8a}.eco-node[aria-pressed=true]{background:#35212a;border-color:var(--red)}.eco-node strong{display:block;font-size:12px}.eco-node span{display:block;font-size:9px;color:var(--muted);font-family:var(--mono);margin-top:3px}.eco-node[data-actor=creators]{left:24%;top:18%}.eco-node[data-actor=aws]{left:76%;top:18%}.eco-node[data-actor=viewers]{left:17%;top:50%}.eco-node[data-actor=advertisers]{left:83%;top:50%}.eco-node[data-actor=claro]{left:24%;top:82%}.eco-node[data-actor=regulators]{left:76%;top:82%}.map-hint{position:absolute;bottom:13px;text-align:center;left:0;right:0;font-size:9px;color:var(--muted);font-family:var(--mono)}.eco-detail{border:1px solid var(--line);border-radius:var(--r);padding:30px;background:var(--panel)}.eco-detail h3{font-size:25px;letter-spacing:-.04em;margin:13px 0 22px}.exchange{padding:14px 0;border-top:1px solid var(--line)}.exchange .label{font-size:9px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;display:block;margin-bottom:5px}.exchange p{font-size:13px;line-height:1.7}.exchange.takeaway{background:#211b24;margin:10px -8px 0;padding:15px;border-radius:8px;border:1px solid #3e2e3e}.exchange.takeaway .label{color:#d4c6e9}
+/* Country comparison */
+.market-section{background:linear-gradient(180deg,#111217,#0b0c0f)}.segmented{display:inline-flex;background:#0d0e12;border:1px solid var(--line);padding:4px;border-radius:8px;gap:4px;flex-wrap:wrap}.segmented button{padding:9px 15px;font-size:12px;border-radius:5px;color:var(--muted)}.segmented button:hover{color:var(--ink)}.segmented button[aria-pressed=true],.segmented button[aria-selected=true]{background:#2c2c34;color:var(--ink)}.market-chart{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.market-card{border:1px solid var(--line);background:var(--panel);border-radius:12px;padding:27px 30px}.market-card.brazil{border-top:2px solid var(--lime)}.market-card.india{border-top:2px solid var(--blue)}.country-title{display:flex;align-items:center;justify-content:space-between;gap:16px}.country-title h3{font-size:18px;letter-spacing:-.04em}.country-code{font-family:var(--mono);font-size:10px;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:3px 8px}.metric-value{font-size:52px;font-weight:650;line-height:1.1;letter-spacing:-.06em;margin-top:25px;font-variant-numeric:tabular-nums}.metric-label{color:var(--muted);font-size:11px;margin-top:7px}.bar-track{height:7px;background:#292a30;border-radius:4px;overflow:hidden;margin-top:22px}.bar-fill{height:100%;border-radius:4px;transition:width .55s ease}.brazil .bar-fill{background:var(--lime)}.india .bar-fill{background:var(--blue)}.chart-annotation{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-top:15px}.chart-annotation p{color:var(--muted);font-size:11px;max-width:720px}.country-lenses{margin-top:32px;border-top:1px solid var(--line);padding-top:26px}.country-tabbar{display:flex;gap:20px;flex-wrap:wrap;border-bottom:1px solid var(--line)}.country-tabbar button{color:var(--muted);font-size:12px;padding:10px 0 14px;border-bottom:2px solid transparent;margin-bottom:-1px}.country-tabbar button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--red)}.country-context{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:25px 0 5px}.country-context h4{font-family:var(--mono);font-size:10px;letter-spacing:.07em;text-transform:uppercase;margin-bottom:12px}.country-context p{font-size:14px;color:var(--muted);line-height:1.8}.market-verdict{margin-top:27px;background:#21271b;border:1px solid #3a4530;border-radius:10px;padding:22px 26px;display:flex;gap:24px;align-items:flex-start}.market-verdict .label{color:var(--lime);font-size:10px;letter-spacing:.07em;white-space:nowrap;margin-top:4px}.market-verdict p{color:#ced3c7;font-size:13px;line-height:1.8}.market-verdict strong{color:var(--ink);font-weight:600}
+/* Strategy */
+.strategy-section .section-head h2{max-width:750px}.mode-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mode-card{border:1px solid var(--line);border-radius:10px;text-align:left;padding:20px;background:#111217}.mode-card[aria-pressed=true]{background:#291b20;border-color:#ae3c4c}.mode-card .label{display:block;font-size:9px;color:var(--muted);letter-spacing:.06em;margin-bottom:10px}.mode-card[aria-pressed=true] .label{color:var(--red)}.mode-card strong{font-size:16px;font-weight:600}.mode-card p{font-size:12px;color:var(--muted);margin-top:9px}.mode-details{padding:24px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:30px}.mode-details .label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:8px}.mode-details p{font-size:14px;line-height:1.8}.priority-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:35px}.priority-card{padding:27px;border-radius:12px;border:1px solid var(--line);background:var(--panel)}.priority-card .test-number{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.08em}.priority-card h3{font-size:22px;letter-spacing:-.04em;margin:11px 0 13px}.priority-card p{color:var(--muted);font-size:13px;line-height:1.8}.test-pair{display:grid;grid-template-columns:1fr 30px 1fr;align-items:center;gap:8px;margin-top:20px}.test-pair>span{font-size:10px;font-family:var(--mono);text-align:center;color:var(--muted)}.test-group{padding:12px 10px;border:1px solid var(--line);border-radius:7px;font-size:11px;background:#0f1014;text-align:center}.test-group.experimental{border-color:#7f3543;color:#f6b0b6}.experiment-foot{margin-top:20px;display:flex;gap:16px;align-items:flex-start}.experiment-foot .pill{flex-shrink:0;color:var(--gold);background:#271e17;border-color:#514030}.experiment-foot p{font-size:12px;color:var(--muted)}
+/* Interactive lab */
+.lab-section{background:linear-gradient(135deg,#161217,#0d0e12 45%,#12171b)}.lab-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:24px}.lab-presets{display:flex;gap:8px;flex-wrap:wrap}.lab-presets button{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:8px 11px}.lab-presets button[aria-pressed=true]{color:var(--ink);border-color:#876348;background:#2e231c}.lab-layout{display:grid;grid-template-columns:1.25fr 1fr;gap:26px;align-items:stretch}.sliders{border:1px solid var(--line);border-radius:14px;background:#121317;padding:26px 30px}.slider-group+.slider-group{margin-top:23px}.slider-line{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:7px}.slider-line label{font-size:12px;color:#d2d2da}.slider-line output{font-family:var(--mono);font-size:12px;color:var(--ink);font-variant-numeric:tabular-nums}.slider-group input{appearance:none;-webkit-appearance:none;width:100%;height:5px;border-radius:10px;background:#34333b;display:block;margin:13px 0 0;cursor:pointer;accent-color:var(--gold)}.slider-group input::-webkit-slider-thumb{appearance:none;width:15px;height:15px;border-radius:50%;background:var(--gold);border:3px solid #141318;box-shadow:0 0 0 1px var(--gold)}.slider-group input::-moz-range-thumb{width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid #141318}.slider-group.positive input{accent-color:var(--lime)}.slider-group.positive input::-webkit-slider-thumb{background:var(--lime);box-shadow:0 0 0 1px var(--lime)}.slider-group.positive input::-moz-range-thumb{background:var(--lime)}.sliders .label{color:var(--muted);font-size:9px;text-transform:uppercase;letter-spacing:.07em}.slider-divider{height:1px;background:var(--line);margin:23px 0}.lab-output{border:1px solid #3c4133;border-radius:14px;padding:30px;background:radial-gradient(ellipse at 50% 10%,#29322255,#131417 70%);display:flex;flex-direction:column}.lab-output.negative{border-color:#58303a;background:radial-gradient(ellipse at 50% 10%,#41202b66,#131417 70%)}.lab-output .label{font-size:10px;color:var(--muted);letter-spacing:.05em;text-transform:uppercase}.net-value{font-size:70px;font-weight:600;letter-spacing:-.065em;line-height:1;margin-top:20px;color:var(--lime);font-variant-numeric:tabular-nums}.negative .net-value{color:#ff8793}.net-unit{font-size:11px;color:var(--muted);margin-top:10px}.lab-verdict{margin-top:23px;font-size:19px;letter-spacing:-.025em}.lab-explanation{color:var(--muted);font-size:12px;line-height:1.8;margin-top:10px}.lab-sums{margin-top:24px;border-top:1px solid var(--line);padding-top:17px;display:grid;gap:11px}.sum-row{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--muted)}.sum-row strong{color:var(--ink);font-family:var(--mono);font-size:12px;font-weight:500}.checkline{display:flex;gap:9px;align-items:flex-start;font-size:11px;color:#d1d3cc;margin-top:23px;cursor:pointer;padding-top:18px;border-top:1px solid var(--line)}.checkline input{accent-color:var(--lime);margin:3px 0;width:14px;height:14px;flex-shrink:0}.lab-output .btn{margin-top:auto;align-self:flex-start}.lab-output .output-actions{padding-top:20px;display:flex;align-items:center;gap:16px}.lab-output .reset{font-size:11px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}.formula{margin-top:22px;border:1px solid var(--line);border-radius:8px;padding:14px 20px;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.9}.formula strong{color:var(--ink);font-weight:500}.lab-disclaimer{margin-top:15px;font-size:11px;color:var(--muted);line-height:1.85}
+/* Quiz */
+.quiz-section{padding-top:70px;padding-bottom:70px}.quiz-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}.quiz-intro h2{font-size:40px;letter-spacing:-.055em;margin:17px 0}.quiz-intro p{color:var(--muted);font-size:14px;max-width:340px}.quiz-intro .label{display:block;color:var(--muted);font-size:10px;margin-top:26px;letter-spacing:.06em}.quiz-box{padding:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px;min-height:360px}.quiz-progress{display:flex;gap:5px;margin:0 0 23px}.quiz-progress span{height:3px;background:#33343d;border-radius:2px;flex:1}.quiz-progress span.done{background:var(--red)}.quiz-box .question-number{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.08em}.quiz-box h3{font-size:20px;letter-spacing:-.025em;line-height:1.4;margin:10px 0 18px}.quiz-options{display:grid;gap:9px}.quiz-option{text-align:left;padding:11px 14px;border-radius:7px;border:1px solid #393943;background:#101115;font-size:12px;display:flex;align-items:center;gap:12px;line-height:1.6}.quiz-option .letter{font-family:var(--mono);font-size:10px;color:var(--muted)}.quiz-option:hover:not(:disabled){border-color:#8a8592}.quiz-option.correct{border-color:#6c8452;background:#232c1c;color:#e4edd7}.quiz-option.wrong{border-color:#a44352;background:#2d1c22}.quiz-feedback{font-size:12px;color:var(--muted);margin-top:16px;line-height:1.7}.quiz-next{margin-top:18px}.quiz-score{font-size:65px;font-weight:650;letter-spacing:-.05em;color:var(--lime);line-height:1.2;margin:8px 0}
+/* Sources */
+.sources-section{background:#101115}.source-notice{border:1px solid #49402f;background:#221e18;color:#cabea9;padding:17px 21px;border-radius:9px;font-size:12px;line-height:1.75;margin-bottom:25px}.source-notice strong{color:#edddc2}.source-controls{display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}.source-search{position:relative;flex:1;min-width:230px;max-width:400px}.source-search input{width:100%;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:11px 14px 11px 38px;font-size:12px}.source-search svg{position:absolute;left:13px;top:14px;color:var(--muted)}.source-filter{display:flex;gap:5px;flex-wrap:wrap}.source-filter button{border-radius:5px;font-size:11px;color:var(--muted);padding:8px 11px}.source-filter button[aria-pressed=true]{background:#292a32;color:var(--ink)}.sources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.source-card{padding:21px;border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;background:#15161c;min-height:190px;text-align:left}.source-card:hover{border-color:#7a4450;background:#1d181f}.source-card .source-meta{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.03em}.source-card .source-no{color:var(--red)}.source-card h3{font-size:14px;line-height:1.5;letter-spacing:-.01em;margin-bottom:12px}.source-card .source-description{font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:16px}.source-card .source-link{margin-top:auto;font-size:10px;color:#e1d9df}.source-empty{padding:30px 0;color:var(--muted);font-size:14px}.source-footer{margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.source-footer .small{color:var(--muted);font-size:11px}.source-footer-actions{display:flex;gap:20px;align-items:center}.integrity{border-top:1px solid var(--line);margin-top:40px;padding-top:25px}.integrity summary{cursor:pointer;font-size:13px;font-weight:600;padding:5px 0}.integrity-body{display:grid;grid-template-columns:1fr 1fr;gap:35px;margin-top:20px}.integrity h4{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.05em;margin-bottom:12px}.integrity p{font-size:12px;color:var(--muted);line-height:1.9}.integrity p+p{margin-top:10px}
+/* Footer and dialog */
+.footer{padding:35px 0;background:#090a0d;border-top:1px solid var(--line)}.footer-grid{display:flex;align-items:center;justify-content:space-between;gap:28px}.footer p{font-size:10px;color:var(--muted);max-width:460px;text-align:center;line-height:1.8}.footer a:last-child{font-size:11px}.modal{border:1px solid #4c424d;border-radius:16px;background:#18181f;color:var(--ink);padding:0;max-width:620px;width:calc(100% - 34px);max-height:85vh;box-shadow:0 25px 100px #000b}.modal::backdrop{background:#000b;backdrop-filter:blur(5px)}.modal-content{padding:32px;position:relative}.modal-close{position:absolute;top:15px;right:15px;width:32px;height:32px;border:1px solid var(--line);border-radius:7px;font-size:19px;line-height:1;display:grid;place-items:center}.modal h2{font-size:26px;letter-spacing:-.04em;margin:17px 28px 20px 0;line-height:1.3}.modal .source-citation{background:#111217;padding:18px;border:1px solid var(--line);border-radius:8px;font-size:13px;color:#d4d1d8;line-height:1.8}.modal h3{font-size:11px;font-family:var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:23px 0 10px}.modal p{font-size:13px;color:var(--muted);line-height:1.8}.modal .modal-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.modal .source-host{font-family:var(--mono);font-size:10px;color:var(--muted);overflow-wrap:anywhere;margin-top:14px}.modal .modal-notice{font-size:11px;color:var(--gold);margin-top:20px}.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,20px);padding:12px 20px;border-radius:8px;border:1px solid var(--line);background:#f2eee9;color:#151419;font-size:12px;box-shadow:0 6px 30px #0007;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:100;max-width:calc(100% - 40px);text-align:center}.toast.visible{opacity:1;transform:translate(-50%,0)}.noscript{padding:24px;color:var(--gold);border:1px solid var(--gold);margin:25px}.refresh{animation:appear .25s ease}@keyframes appear{from{opacity:.25;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+/* Adaptive layouts */
+@media(min-width:1500px){.wrap{width:min(1280px,calc(100% - 120px))}.hero-grid{gap:100px}.hero h1{font-size:90px}.hero-console{min-height:430px}.console-art{height:166px}.hero{padding-top:74px}}
+@media(max-width:1100px){.wrap{width:calc(100% - 60px)}.nav-links{gap:18px}.hero-grid{gap:35px}.hero h1{font-size:65px}.hero-console{padding:21px}.signal.left{left:0}.signal.right{right:0}.econ-story,.econ-visual{padding:27px}.eco-node{min-width:113px;padding:12px}.eco-node strong{font-size:11px}.eco-node span{font-size:8px}.hub{width:85px;height:85px}.eco-detail{padding:25px}.ecosystem-grid{grid-template-columns:1.2fr 1fr;gap:17px}.quiz-grid{gap:35px}.section-head>p{max-width:290px}}
+@media(max-width:900px){.nav-links{gap:15px}.nav-links>a{font-size:11px}.nav-links>a:nth-child(2){display:none}.brand-sub{font-size:7px}.hero-grid{grid-template-columns:1fr 1fr;gap:25px}.hero h1{font-size:55px}.hero-copy>p{font-size:14px}.hero-actions .btn{padding:12px 14px;font-size:11px}.hero-topline .issue{display:none}.hero-console{min-height:385px;padding:20px}.console-title{font-size:24px}.console-top{font-size:8px}.console-bottom{align-items:flex-start;flex-direction:column;gap:8px}.signal{font-size:8px;padding:6px}.signal.left{top:29px}.signal.right{bottom:24px}.hero-footnote{font-size:9px}.verdict{padding:22px 17px;gap:10px}.verdict h3{font-size:13px}.section-head{display:block}.section-head>p{max-width:600px;margin-top:18px}.econ-tab{padding:15px 12px}.econ-tab strong{font-size:12px}.econ-panel{grid-template-columns:1.2fr 1fr}.econ-story h3{font-size:25px}.econ-story p{font-size:13px}.econ-visual{padding:23px}.flow-step{padding:12px 10px;gap:9px}.flow-step h4{font-size:12px}.flow-step p{font-size:10px}.competitor-card{padding:21px}.brand-name{font-size:24px}.competitor-card .corner-arrow{right:15px;top:20px}.ecosystem-grid{grid-template-columns:1fr}.ecosystem-map{min-height:400px}.eco-node{min-width:150px;text-align:center}.eco-node strong{font-size:13px}.eco-node span{font-size:10px}.eco-detail{min-height:0}.exchange{display:grid;grid-template-columns:140px 1fr;gap:18px}.exchange .label{padding-top:4px}.eco-detail h3{margin-bottom:15px}.country-tabbar{gap:17px}.lab-layout{grid-template-columns:1.05fr 1fr;gap:18px}.sliders{padding:25px}.lab-output{padding:25px}.net-value{font-size:62px}.sources-grid{grid-template-columns:1fr 1fr}.mode-card strong{font-size:14px}.quiz-grid{grid-template-columns:1fr 1.2fr;gap:25px}.quiz-intro h2{font-size:34px}.section{padding:70px 0}}
+@media(max-width:680px){.wrap{width:calc(100% - 36px)}.header{height:68px}.brand-word{font-size:17px}.brand-mark{width:24px;height:27px}.nav-links{display:none;position:absolute;top:67px;left:0;right:0;background:#101115;border-bottom:1px solid var(--line);padding:16px 20px;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links>a{font-size:14px;padding:12px 8px}.nav-links>a:nth-child(2){display:block}.nav-links>a:last-child{margin-top:8px}.menu-toggle{display:block}.hero{padding-top:34px}.hero-topline{margin-bottom:28px}.hero-topline .eyebrow{font-size:8px;letter-spacing:.08em;gap:8px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero h1{font-size:clamp(53px,12vw,74px);letter-spacing:-.065em;max-width:500px}.hero-copy>p{font-size:14px;margin-top:20px;max-width:440px}.hero-actions{margin:24px 0 17px}.hero-actions .btn{font-size:12px;padding:13px 17px}.hero-console{padding:23px;min-height:365px;max-width:100%}.console-art{height:135px;margin:8px 0}.console-title{font-size:27px}.console-top{font-size:9px}.console-bottom{flex-direction:row;align-items:center}.console-desc{font-size:12px}.signal{font-size:9px}.signal.left{left:15px;top:25px}.signal.right{right:5px;bottom:25px}.hero-strip{margin-top:34px;grid-template-columns:1fr}.verdict{padding:17px 0;gap:18px;align-items:center}.verdict:first-child{padding-left:0}.verdict+.verdict{border-left:0;border-top:1px solid var(--line)}.verdict>div{display:flex;justify-content:space-between;align-items:center;gap:20px;flex:1}.verdict h3{margin:0;font-size:13px}.verdict .label{font-size:8px}.legend{gap:14px;padding:17px 0}.legend b{font-size:9px}.legend>.legend-intro{display:none}.section{padding:56px 0}.section-head{margin-bottom:26px}.section-head h2{font-size:34px;margin-top:13px}.section-head>p{font-size:13px;margin-top:15px}.eyebrow{font-size:10px}.econ-tabs{grid-template-columns:repeat(5,minmax(0,1fr))}.econ-tab{padding:12px 5px;text-align:center}.econ-tab span{font-size:8px;margin-bottom:5px}.econ-tab strong{font-size:10px;font-weight:550}.econ-panel{grid-template-columns:1fr}.econ-story{padding:25px}.econ-story h3{font-size:26px}.econ-visual{border-left:0;border-top:1px solid var(--line);padding:25px}.flow-step{padding:12px 15px}.flow-step h4{font-size:13px}.flow-step p{font-size:11px}.caution{font-size:12px}.competitor-grid{gap:8px}.competitor-card{padding:17px 11px}.brand-name{font-size:19px}.brand-name.disney{font-size:21px}.competitor-card p{font-size:10px;margin:10px 0 15px;line-height:1.6}.competitor-card .label{font-size:8px;letter-spacing:0}.competitor-card .corner-arrow{display:none}.rival-details{grid-template-columns:1fr;padding:23px;gap:22px}.rival-details p{font-size:13px}.ecosystem-map{min-height:366px}.eco-node{min-width:112px;padding:11px 8px}.eco-node strong{font-size:11px}.eco-node span{font-size:8px}.hub{width:82px;height:82px}.hub strong{font-size:17px}.hub small{font-size:7px}.eco-node[data-actor=viewers]{left:19%}.eco-node[data-actor=advertisers]{left:81%}.eco-node[data-actor=creators],.eco-node[data-actor=claro]{left:24%}.eco-node[data-actor=aws],.eco-node[data-actor=regulators]{left:76%}.eco-detail{padding:23px}.exchange{grid-template-columns:1fr;gap:3px}.exchange .label{font-size:9px}.exchange p{font-size:13px}.market-chart{gap:12px;margin-top:18px}.market-card{padding:21px 17px}.country-title h3{font-size:16px}.country-code{font-size:8px;padding:3px 5px}.metric-value{font-size:36px;margin-top:20px}.metric-label{font-size:10px}.bar-track{margin-top:20px}.segmented{display:flex;width:100%;gap:2px}.segmented button{flex:1;padding:9px 6px;font-size:10px}.chart-annotation{flex-direction:column;gap:8px}.chart-annotation .source-row{margin-top:0}.country-tabbar{gap:16px;row-gap:0}.country-tabbar button{font-size:11px;padding-bottom:12px}.country-context{gap:22px;grid-template-columns:1fr;padding-top:24px}.country-context h4{margin-bottom:8px}.country-context p{font-size:13px}.market-verdict{flex-direction:column;gap:9px;padding:20px}.market-verdict p{font-size:12px}.mode-grid{grid-template-columns:1fr;gap:10px}.mode-card{padding:18px 20px}.mode-card .label{margin-bottom:6px}.mode-card strong{font-size:16px}.mode-card p{margin-top:7px}.mode-details{grid-template-columns:1fr;gap:19px}.mode-details p{font-size:13px}.priority-grid{grid-template-columns:1fr;gap:14px;margin-top:27px}.priority-card{padding:23px}.experiment-foot{gap:12px}.experiment-foot p{font-size:11px}.experiment-foot .pill{font-size:9px;padding:5px 8px}.lab-top{align-items:flex-start;flex-direction:column;gap:14px}.lab-presets{gap:6px}.lab-presets button{font-size:10px;padding:7px 9px}.lab-layout{grid-template-columns:1fr;gap:18px}.sliders{padding:24px}.slider-line label{font-size:12px}.lab-output{padding:25px}.lab-verdict{font-size:21px}.net-value{font-size:65px}.lab-explanation{font-size:13px}.formula{padding:15px;font-size:10px}.quiz-grid{grid-template-columns:1fr;gap:25px}.quiz-intro h2{font-size:34px}.quiz-intro .label{margin-top:18px}.quiz-box{padding:23px;min-height:0}.source-controls{gap:13px}.source-search{max-width:none}.source-filter{width:100%;justify-content:space-between;gap:0}.source-filter button{padding:8px 10px}.sources-grid{grid-template-columns:1fr;gap:11px}.source-card{min-height:0;padding:20px}.source-card h3{font-size:15px}.source-card .source-meta{margin-bottom:12px}.source-card .source-description{margin-bottom:12px;font-size:12px}.source-footer{align-items:flex-start}.source-footer-actions{width:100%;justify-content:space-between;gap:12px}.source-notice{padding:16px 18px;font-size:11px}.integrity-body{grid-template-columns:1fr;gap:23px}.footer-grid{flex-direction:column;gap:18px}.footer p{max-width:330px}.modal-content{padding:26px}.modal h2{font-size:24px}.modal .source-citation{padding:15px;font-size:12px}.modal .modal-actions{flex-direction:column}.modal .btn{width:100%}}
+@media(max-width:360px){.wrap{width:calc(100% - 28px)}.hero h1{font-size:49px}.hero-actions{gap:8px}.hero-actions .btn{font-size:11px;padding:12px}.eco-node{min-width:100px;padding:11px 6px}.eco-node strong{font-size:10px}.eco-node span{font-size:7px}.hub{width:70px;height:70px}.hub strong{font-size:15px}.metric-value{font-size:32px}.brand-name{font-size:17px}.brand-name.disney{font-size:18px}.competitor-card .label{font-size:7px}.source-filter button{font-size:10px;padding:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{body{background:white;color:#151515;font-size:11px}.wrap{width:100%}.header,.hero-console,.hero-actions,.legend,.menu-toggle,.lab-presets,.sliders,.quiz-section,.source-controls,.source-footer,.modal,.footer,.reading-progress,.toast,.text-link,.chip,.btn,.country-tabbar,.econ-tabs,.mode-grid,.competitor-grid{display:none!important}.hero{padding:0}.hero-grid{display:block}.hero h1{font-size:42px;color:#151515}.hero h1 em{color:#9b1221}.hero-copy>p{color:#444;max-width:100%}.hero-strip{margin-top:20px}.hero-footnote{color:#555}.section{padding:24px 0;break-inside:avoid;background:white}.section-head h2{font-size:28px}.section-head>p,.muted,.small,.section-note,.line-note,.hero-topline,.hero-copy p{color:#444}.econ-panel,.rival-details,.ecosystem-grid,.market-chart,.priority-grid,.lab-layout,.sources-grid,.mode-details,.integrity-body{display:block}.econ-story,.econ-visual,.rival-details,.eco-detail,.market-card,.priority-card,.lab-output,.source-card,.source-notice,.market-verdict{background:white;color:#111;border:1px solid #bbb;box-shadow:none;margin:12px 0;padding:18px;break-inside:avoid}.ecosystem-map{display:none}.econ-story p,.econ-story .interpretation,.eco-detail p,.country-context p,.priority-card p,.lab-explanation,.net-unit,.sum-row,.source-card .source-description,.integrity p,.market-verdict p,.source-notice,.lab-disclaimer{color:#444}.badge{color:#333;background:#eee}.econ-visual{border:0}.flow-step{background:white;border-color:#bbb}.flow-step p,.flow-step h4{color:#333}.market-card{display:inline-block;width:48%;vertical-align:top}.market-verdict strong{color:#111}.lab-output .net-value{color:#111}.bar-track,.bar-fill{print-color-adjust:exact;-webkit-print-color-adjust:exact}.source-card{min-height:0}.source-card h3{font-size:13px}.source-card .source-link{color:#333}.formula{color:#444}.formula strong{color:#111}.integrity{margin:15px 0}.show-on-print{display:block}.hide-on-print{display:none}}
+/* Small-screen intrinsic-size guard for experiment comparisons. */
+.priority-card{min-width:0}.test-pair{grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr)}.test-group{overflow-wrap:anywhere}
+@media(max-width:360px){.test-group{padding-left:6px;padding-right:6px;font-size:10px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+  <nav class="nav wrap" aria-label="Main navigation">
+    <a class="brand" href="#top" aria-label="NEXTPLAY home"><span class="brand-mark" aria-hidden="true">N</span><span><span class="brand-word">NEXT<span>PLAY</span></span><span class="brand-sub">NETFLIX × AI / RESEARCH EDITION</span></span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu <span aria-hidden="true">☰</span></button>
+    <div class="nav-links" id="nav-links">
+      <a href="#advantage">AI advantage</a><a href="#ecosystem">Ecosystem</a><a href="#markets">The markets</a><a href="#lab">Strategy lab</a><a href="#sources">The evidence <span aria-hidden="true">↗</span></a>
+    </div>
+  </nav>
+  <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
+</header>
+<main id="main">
+<section class="hero" id="top" aria-labelledby="hero-title">
+ <div class="wrap">
+  <div class="hero-topline"><p class="eyebrow"><span class="index">AN INDEPENDENT STRATEGY STUDY</span><span aria-hidden="true">/</span> BRAZIL + INDIA</p><span class="issue">RESEARCH SNAPSHOT · 25 OCT 2026</span></div>
+  <div class="hero-grid">
+   <div class="hero-copy">
+    <h1 id="hero-title">Better AI.<br><em>Stronger</em><br>Netflix?</h1>
+    <p>AI can help Netflix find your next favourite show. But can it build a lasting advantage—and where should the company grow next?</p>
+    <div class="hero-actions"><a class="btn primary" href="#advantage"><span aria-hidden="true">▶</span> Explore the research</a><a class="btn" href="#lab">Test the strategy <span class="arrow" aria-hidden="true">↗</span></a></div>
+    <div class="hero-footnote">5 ECONOMIC LENSES &nbsp; / &nbsp; 3 COMPANIES &nbsp; / &nbsp; 2 MARKETS</div>
+   </div>
+   <div class="hero-console" aria-label="The report’s recommendation: test growth in Brazil through Claro; prove the financial value before scaling.">
+    <div class="console-top"><span>THE NEXT MOVE</span><span class="live"><span class="status-dot" aria-hidden="true"></span> RESEARCH HYPOTHESIS</span></div>
+    <div class="console-art" aria-hidden="true"><div class="art-grid"></div><div class="orbit"></div><div class="console-play"><svg width="27" height="30" viewBox="0 0 27 30"><path d="M5 3 25 15 5 27Z" fill="#fff"/></svg></div><div class="signal left">BR &nbsp; DISCOVERY + ADS</div><div class="signal right">IN &nbsp; SCALE + GROWTH</div></div>
+    <span class="badge analysis">The report’s recommendation</span>
+    <h2 class="console-title">Brazil first.<br>Prove the value.</h2>
+    <p class="console-desc">Build on the Claro partnership. Test better recommendations. Keep India as a strong alternative.</p>
+    <div class="console-bottom"><span class="tiny">A CONDITIONAL CHOICE, NOT A FORECAST</span><a href="#strategy" class="text-link">Why this move <span aria-hidden="true">↗</span></a></div>
+   </div>
+  </div>
+  <div class="hero-strip" aria-label="The executive diagnostic">
+   <div class="verdict"><span class="verdict-no">01</span><div><span class="label green">Could strengthen</span><h3>Data + better discovery</h3></div></div>
+   <div class="verdict"><span class="verdict-no">02</span><div><span class="label gold">Becoming less unique</span><h3>Individual AI features</h3></div></div>
+   <div class="verdict"><span class="verdict-no">03</span><div><span class="label red">Still exposed</span><h3>Switching + pricing power</h3></div></div>
+  </div>
+  <div class="legend" aria-label="How to read this site"><span class="legend-intro">How to read this study</span><span><i aria-hidden="true"></i><b>Reported evidence*</b></span><span><i class="analysis-dot" aria-hidden="true"></i><b>Research judgment</b></span><span><i class="assumption-dot" aria-hidden="true"></i><b>Illustrative assumptions</b></span></div>
+  <p class="small muted" style="font-size:10px;margin-bottom:24px">*Evidence and references are carried over from the supplied report, not independently reverified for this site. This is a research snapshot, not live company information.</p>
+ </div>
+</section>
+<noscript><div class="wrap noscript">This page needs JavaScript for the interactive comparisons, source library, quiz, and simulator. The main conclusion is that Netflix should test growth through Claro in Brazil while keeping India as an alternative. Turn on JavaScript to explore the evidence and assumptions. The ZIP package also includes the reference list and research notes.</div></noscript>
+
+<section class="section" id="advantage" aria-labelledby="advantage-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">01 / THE AI ADVANTAGE</span></p><h2 id="advantage-title">The advantage isn’t AI alone.</h2></div><p>Content, data, and distribution matter together. Choose a lens to see where AI helps—and where the argument has limits.</p></div>
+  <div class="econ-tabs" role="tablist" aria-label="Five AI economics lenses">
+   <button class="econ-tab" role="tab" aria-selected="true" aria-controls="econ-panel" id="econ-value" data-lens="value"><span>01</span><strong>Value</strong></button>
+   <button class="econ-tab" role="tab" aria-selected="false" aria-controls="econ-panel" id="econ-cost" data-lens="cost" tabindex="-1"><span>02</span><strong>Costs</strong></button>
+   <button class="econ-tab" role="tab" aria-selected="false" aria-controls="econ-panel" id="econ-switching" data-lens="switching" tabindex="-1"><span>03</span><strong>Switching</strong></button>
+   <button class="econ-tab" role="tab" aria-selected="false" aria-controls="econ-panel" id="econ-learning" data-lens="learning" tabindex="-1"><span>04</span><strong>Learning</strong></button>
+   <button class="econ-tab" role="tab" aria-selected="false" aria-controls="econ-panel" id="econ-boundaries" data-lens="boundaries" tabindex="-1"><span>05</span><strong>Boundaries</strong></button>
+  </div>
+  <div id="econ-panel" class="econ-panel" role="tabpanel" aria-labelledby="econ-value" tabindex="0"></div>
+ </div>
+</section>
+
+<section class="section" id="competitors" aria-labelledby="competitor-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">02 / THE COMPETITIVE SET</span><span>EXHIBIT 02</span></p><h2 id="competitor-title">Same technology.<br>Different reasons to subscribe.</h2></div><p>Click a company. An AI feature can be copied; a strong catalogue or a useful bundle is a different kind of advantage.</p></div>
+  <div class="competitor-grid" aria-label="Select a company">
+   <button class="competitor-card" data-company="netflix" aria-pressed="true"><span class="corner-arrow" aria-hidden="true">↗</span><span class="brand-name netflix">NETFLIX</span><p>Viewing data + discovery</p><span class="label">Make the catalogue work harder</span></button>
+   <button class="competitor-card" data-company="amazon" aria-pressed="false"><span class="corner-arrow" aria-hidden="true">↗</span><span class="brand-name amazon">prime video</span><p>Convenience + bundled value</p><span class="label">One membership, more benefits</span></button>
+   <button class="competitor-card" data-company="disney" aria-pressed="false"><span class="corner-arrow" aria-hidden="true">↗</span><span class="brand-name disney">Disney+</span><p>Franchises + advertising tools</p><span class="label">Stories people seek out</span></button>
+  </div>
+  <div class="rival-details" id="rival-details" aria-live="polite" aria-atomic="true"></div>
+  <p class="section-note">These are capabilities and relationships cited in the report. Product announcements do not establish which company earns the best return from AI. Availability varies by market.</p>
+ </div>
+</section>
+
+<section class="section" id="ecosystem" aria-labelledby="ecosystem-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">03 / THE ECOSYSTEM</span><span>EXHIBIT 01</span></p><h2 id="ecosystem-title">Netflix doesn’t work alone.</h2></div><p>“Exchange” means what each party gives Netflix and gets in return. Select a relationship to see its value and its risks.</p></div>
+  <div class="ecosystem-grid">
+   <div class="ecosystem-map" role="group" aria-label="Interactive Netflix ecosystem">
+    <div class="map-grid" aria-hidden="true"></div><div class="map-ring" aria-hidden="true"></div>
+    <svg class="map-lines" viewBox="0 0 600 440" preserveAspectRatio="none" aria-hidden="true"><line x1="300" y1="220" x2="144" y2="79"/><line x1="300" y1="220" x2="456" y2="79"/><line x1="300" y1="220" x2="102" y2="220"/><line x1="300" y1="220" x2="498" y2="220"/><line x1="300" y1="220" x2="144" y2="361"/><line x1="300" y1="220" x2="456" y2="361"/></svg>
+    <div class="hub" aria-hidden="true"><strong>NETFLIX</strong><small>THE PLATFORM</small></div>
+    <button class="eco-node" data-actor="creators" aria-pressed="false"><strong>Creators</strong><span>CONTENT & RIGHTS</span></button>
+    <button class="eco-node" data-actor="aws" aria-pressed="true"><strong>AWS</strong><span>TECHNOLOGY</span></button>
+    <button class="eco-node" data-actor="viewers" aria-pressed="false"><strong>Viewers</strong><span>SUBSCRIPTIONS</span></button>
+    <button class="eco-node" data-actor="advertisers" aria-pressed="false"><strong>Advertisers</strong><span>CAMPAIGNS</span></button>
+    <button class="eco-node" data-actor="claro" aria-pressed="false"><strong>Claro</strong><span>DISTRIBUTION</span></button>
+    <button class="eco-node" data-actor="regulators" aria-pressed="false"><strong>Regulators</strong><span>RULES & OVERSIGHT</span></button>
+    <span class="map-hint">SELECT A NODE TO FOLLOW THE EXCHANGE</span>
+   </div>
+   <div class="eco-detail" id="eco-detail" aria-live="polite" aria-atomic="true"></div>
+  </div>
+  <p class="section-note">The map adapts Exhibit 1. Regulators set obligations; that relationship is not a commercial exchange. Strategic implications are the report’s analysis.</p>
+ </div>
+</section>
+
+<section class="section market-section" id="markets" aria-labelledby="markets-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">04 / THE COUNTRY CHOICE</span><span>EXHIBIT 03</span></p><h2 id="markets-title">One decision.<br>Two different opportunities.</h2></div><p>India offers scale. Brazil offers an existing advertising route. Change the metric, then look beyond the numbers.</p></div>
+  <div class="segmented" aria-label="Choose a country comparison metric">
+   <button data-metric="population" aria-pressed="true">Population</button><button data-metric="gdp" aria-pressed="false">GDP per capita</button><button data-metric="internet" aria-pressed="false">Internet use</button>
+  </div>
+  <div class="market-chart" aria-live="polite" aria-atomic="true" id="market-chart">
+   <div class="market-card brazil"><div class="country-title"><h3>Brazil</h3><span class="country-code">BR</span></div><div class="metric-value" id="br-value">212M</div><div class="metric-label" id="br-label">People · 2024</div><div class="bar-track" aria-hidden="true"><div class="bar-fill" id="br-bar" style="width:14.61%"></div></div></div>
+   <div class="market-card india"><div class="country-title"><h3>India</h3><span class="country-code">IN</span></div><div class="metric-value" id="in-value">1.45B</div><div class="metric-label" id="in-label">People · 2024</div><div class="bar-track" aria-hidden="true"><div class="bar-fill" id="in-bar" style="width:100%"></div></div></div>
+  </div>
+  <div class="chart-annotation"><p id="metric-note"></p><div class="source-row" style="margin-top:0"><span class="label">REPORT SOURCE</span><button class="chip" data-source="18">[18] World Bank ↗</button></div></div>
+  <p class="section-note" style="margin-top:8px">Values are transcribed from the report’s 2024 World Bank comparison. They are not live data, Netflix subscriber counts, or forecasts of country profitability.</p>
+  <div class="country-lenses">
+   <div class="country-tabbar" role="tablist" aria-label="Country strategy dimensions">
+    <button id="country-market" role="tab" aria-selected="true" aria-controls="country-context" data-country-lens="market">Market opportunity</button>
+    <button id="country-data" role="tab" aria-selected="false" aria-controls="country-context" tabindex="-1" data-country-lens="data">Data & infrastructure</button>
+    <button id="country-talent" role="tab" aria-selected="false" aria-controls="country-context" tabindex="-1" data-country-lens="talent">Talent</button>
+    <button id="country-rules" role="tab" aria-selected="false" aria-controls="country-context" tabindex="-1" data-country-lens="rules">Regulation</button>
+    <button id="country-geo" role="tab" aria-selected="false" aria-controls="country-context" tabindex="-1" data-country-lens="geo">Geopolitics</button>
+   </div>
+   <div class="country-context" id="country-context" role="tabpanel" aria-labelledby="country-market" tabindex="0"></div>
+  </div>
+  <div class="market-verdict"><span class="label">THE RESEARCH CALL</span><p><strong>Test Brazil first; keep India in the decision.</strong> Brazil’s existing ad-supported plan and Claro relationship make the proposed route practical. If advertising, retention, or tax economics disappoint, reconsider the allocation. The report does not establish which country is more profitable.</p></div>
+ </div>
+</section>
+
+<section class="section strategy-section" id="strategy" aria-labelledby="strategy-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">05 / THE RECOMMENDATION</span></p><h2 id="strategy-title">Partner. Test. Then decide.</h2></div><p>This is a growth recommendation, not a first entry into Brazil. Compare the routes, then see the two tests that matter.</p></div>
+  <div class="mode-grid" aria-label="Compare growth modes">
+   <button class="mode-card" data-mode="alliance" aria-pressed="true"><span class="label">RECOMMENDED IN THE REPORT</span><strong>Deepen the Claro alliance</strong><p>A contractual partnership, without buying equity.</p></button>
+   <button class="mode-card" data-mode="direct" aria-pressed="false"><span class="label">ALTERNATIVE 01</span><strong>Rely on direct marketing</strong><p>Reach households through Netflix’s own channels.</p></button>
+   <button class="mode-card" data-mode="acquisition" aria-pressed="false"><span class="label">ALTERNATIVE 02</span><strong>Acquire a local company</strong><p>Commit capital for a greater degree of control.</p></button>
+  </div>
+  <div class="mode-details" id="mode-details" aria-live="polite" aria-atomic="true"></div>
+  <div class="source-row"><span class="label">PARTNERSHIP CITED IN REPORT</span><button class="chip" data-source="5">[05] Claro ↗</button><span class="badge analysis">Growth-mode choice = analysis</span></div>
+  <div class="priority-grid">
+   <article class="priority-card"><span class="test-number">PRIORITY 01 / THE PRODUCT TEST</span><h3>Does better discovery pay?</h3><p>Randomly assign households within direct and partner groups to the current or improved recommendation system. Keep prices, content, and promotions unchanged. Local reviewers check cultural relevance and misleading suggestions.</p><div class="test-pair"><div class="test-group">A · Current recommendations</div><span>vs.</span><div class="test-group experimental">B · Improved recommendations</div></div></article>
+   <article class="priority-card"><span class="test-number">PRIORITY 02 / THE PARTNERSHIP TEST</span><h3>Are the customers really new?</h3><p>Expand Claro offers in stages after finance and privacy review. Randomly keep some eligible households on existing offers. Count partner payments, taxes, service costs, and losses from direct subscribers moving to lower-margin packages.</p><div class="test-pair"><div class="test-group">A · Existing offers</div><span>vs.</span><div class="test-group experimental">B · Expanded Claro offer</div></div></article>
+  </div>
+  <div class="experiment-foot"><span class="pill">90-DAY PROPOSAL</span><p>Set sample sizes and success thresholds from baseline data before testing. Measure additional contribution per assigned household, retention, and complaints. Include development and rollout costs. Both tests must show credible financial benefits without worse customer outcomes.</p></div>
+ </div>
+</section>
+
+<section class="section lab-section" id="lab" aria-labelledby="lab-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">06 / YOUR TURN</span><span class="badge assumption">Illustrative sandbox</span></p><h2 id="lab-title">Would the strategy pay off?</h2></div><p>Move the sliders. See why more viewing—or more advertising—doesn’t automatically mean more profit.</p></div>
+  <div class="lab-top"><div class="lab-presets" aria-label="Load illustrative assumptions"><button data-preset="balanced" aria-pressed="true">Balanced assumptions</button><button data-preset="weak" aria-pressed="false">Ads disappoint</button><button data-preset="strong" aria-pressed="false">Stronger retention</button></div><span class="control-hint">HYPOTHETICAL US$ / HOUSEHOLD / MONTH</span></div>
+  <div class="lab-layout">
+   <div class="sliders" aria-label="Illustrative incremental income and cost assumptions">
+    <p class="label">ADDITIONAL REVENUE VS. THE EXISTING OFFER</p>
+    <div class="slider-group positive" style="margin-top:18px"><div class="slider-line"><label for="subscription">Subscription revenue gain</label><output id="subscription-output" for="subscription">$1.50</output></div><input type="range" id="subscription" min="0" max="4" step="0.05" value="1.5" aria-describedby="lab-assumptions"></div>
+    <div class="slider-group positive"><div class="slider-line"><label for="advertising">Advertising revenue gain</label><output id="advertising-output" for="advertising">$0.80</output></div><input type="range" id="advertising" min="0" max="3" step="0.05" value="0.8" aria-describedby="lab-assumptions"></div>
+    <div class="slider-divider"></div><p class="label">ADDITIONAL COSTS & LOST REVENUE</p>
+    <div class="slider-group" style="margin-top:18px"><div class="slider-line"><label for="partner">Payments to the partner</label><output id="partner-output" for="partner">$0.45</output></div><input type="range" id="partner" min="0" max="2" step="0.05" value="0.45" aria-describedby="lab-assumptions"></div>
+    <div class="slider-group"><div class="slider-line"><label for="service">Delivery, service & tax costs</label><output id="service-output" for="service">$0.30</output></div><input type="range" id="service" min="0" max="2" step="0.05" value="0.3" aria-describedby="lab-assumptions"></div>
+    <div class="slider-group"><div class="slider-line"><label for="migration">Loss from direct-plan switches</label><output id="migration-output" for="migration">$0.25</output></div><input type="range" id="migration" min="0" max="2" step="0.05" value="0.25" aria-describedby="lab-assumptions"></div>
+    <div class="slider-group"><div class="slider-line"><label for="ai">AI, development & rollout allocation</label><output id="ai-output" for="ai">$0.40</output></div><input type="range" id="ai" min="0" max="2" step="0.05" value="0.4" aria-describedby="lab-assumptions"></div>
+   </div>
+   <div class="lab-output" id="lab-output">
+    <span class="label">ILLUSTRATIVE NET CONTRIBUTION CHANGE</span>
+    <div role="status" aria-live="polite" aria-atomic="true"><div class="net-value" id="net-value">+$0.90</div><p class="net-unit">per eligible household, per month</p><h3 class="lab-verdict" id="lab-verdict">Worth testing—not proven.</h3><p class="lab-explanation" id="lab-explanation"></p></div>
+    <div class="lab-sums"><div class="sum-row"><span>Additional revenue</span><strong id="revenue-sum">+$2.30</strong></div><div class="sum-row"><span>Additional costs + losses</span><strong id="cost-sum">−$1.40</strong></div></div>
+    <label class="checkline"><input type="checkbox" id="experience" checked><span>Assume customer experience is not worse.<br><span class="muted">Uncheck to test the customer-outcome safeguard.</span></span></label>
+    <div class="output-actions"><button class="btn small-btn" id="export-scenario">Export assumptions <span aria-hidden="true">↓</span></button><button class="reset" id="reset-lab">Reset</button></div>
+   </div>
+  </div>
+  <div class="formula"><strong>Contribution change</strong> = subscription gain + advertising gain − partner payments − service & tax costs − direct-plan losses − allocated AI & rollout costs.</div>
+  <p class="lab-disclaimer" id="lab-assumptions"><strong>These slider values are invented for learning, not Netflix data or forecasts.</strong> All values use the same monthly, per-eligible-household basis and compare with the existing offer. Revenue gains exclude direct-plan migration losses, which are deducted separately. The AI input includes incremental computing plus an illustrative allocation of development and rollout costs; the service input excludes those AI costs. The historic Brazilian tax charge is not used here. This simple arithmetic does not estimate statistical confidence, actual acquisition costs, or real country profitability. It does not replace the report’s two separate controlled experiments.</p>
+ </div>
+</section>
+
+<section class="section quiz-section" id="quiz" aria-labelledby="quiz-title">
+ <div class="wrap quiz-grid">
+  <div class="quiz-intro"><p class="eyebrow"><span class="index">07 / THE BOARDROOM CHECK</span></p><h2 id="quiz-title">You’ve seen the strategy.<br>Can you defend it?</h2><p>Three questions. No technical jargon. Check the ideas that matter before making the investment call.</p><span class="label">BASED ON THE REPORT’S ARGUMENT</span></div>
+  <div class="quiz-box" id="quiz-box" aria-live="polite" aria-atomic="true"></div>
+ </div>
+</section>
+
+<section class="section sources-section" id="sources" aria-labelledby="sources-title">
+ <div class="wrap">
+  <div class="section-head"><div><p class="eyebrow"><span class="index">08 / THE EVIDENCE ROOM</span><span>18 REFERENCES</span></p><h2 id="sources-title">Open the evidence.</h2></div><p>See what the report cites, what each source is used for, and where judgment—not reported evidence—begins.</p></div>
+  <div class="source-notice"><strong>Source status:</strong> These references and reported figures come from the supplied research draft, dated 25 October 2026. They have not been independently reverified for this website. Company announcements establish reported activities, not proven AI returns. Check the originals, dates, and market availability before academic submission or public claims.</div>
+  <div class="source-controls"><div class="source-search"><label for="source-search" class="sr-only">Search references by author, title, or topic</label><svg width="15" height="15" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m12 12 5 5" stroke="currentColor" stroke-width="1.6"/></svg><input type="search" id="source-search" placeholder="Search author, title, or topic…" autocomplete="off"></div><div class="source-filter" aria-label="Filter references"><button data-filter="All" aria-pressed="true">All 18</button><button data-filter="Company" aria-pressed="false">Company 13</button><button data-filter="Government" aria-pressed="false">Government 4</button><button data-filter="Data" aria-pressed="false">Data 1</button></div></div>
+  <div class="sources-grid" id="sources-grid"></div><p class="source-empty" id="source-empty" hidden>No matching references. Try a different term or choose “All”.</p>
+  <div class="source-footer"><p class="small" id="source-count" role="status">Showing 6 of 18 references</p><div class="source-footer-actions"><button class="text-link" id="download-references">Download references <span aria-hidden="true">↓</span></button><button class="btn small-btn" id="show-sources">Show all 18 <span aria-hidden="true">+</span></button></div></div>
+  <details class="integrity" id="integrity"><summary>About this research, its limits, and AI assistance</summary><div class="integrity-body"><div><h4>RESEARCH SCOPE & LIMITS</h4><p>This site adapts the supplied Netflix AI Strategic Position Diagnostic and the shorter passages developed in the conversation. The industry is video streaming, with competition extending to social video and advertising budgets. Brazil and India are compared as growth opportunities, not first-entry markets.</p><p>The research snapshot is 25 October 2026. Country indicators are 2024 observations. The report does not provide Netflix’s internal country profitability, acquisition costs, actual Claro commercial terms, or measured returns from these proposals. The recommendation is conditional. The interactive cost model is an educational extension, not evidence collected for the report.</p></div><div><h4>AI-USE DISCLOSURE</h4><p>ChatGPT assisted with source discovery, research interpretation, analysis, structure, substantial drafting, exhibits, and language editing for the report. It also helped shorten sections and prepare references. The website’s design, code, explanations, and illustrative simulator were generated with ChatGPT.</p><p>The author remains responsible for checking the final claims, sources, and submission. No original interviews, proprietary Netflix data, or empirical experiment results are claimed. This is an independent student project, not an official Netflix, Amazon, Disney, or Claro website. The site has no analytics, account system, or data collection. Quiz answers and slider changes stay in this page’s memory.</p></div></div></details>
+ </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap footer-grid"><a class="brand" href="#top" aria-label="NEXTPLAY back to top"><span class="brand-mark" aria-hidden="true">N</span><span class="brand-word">NEXT<span>PLAY</span></span></a><p>Independent academic research. Not affiliated with Netflix.<br>Research snapshot: 25 October 2026 · Interactive adaptation</p><a class="text-link" href="#top">Back to the opening <span aria-hidden="true">↑</span></a></div></footer>
+<dialog class="modal" id="source-modal" aria-labelledby="modal-title"><div class="modal-content"><button class="modal-close" id="modal-close" aria-label="Close source details">×</button><span class="eyebrow" id="modal-meta"></span><h2 id="modal-title"></h2><p class="source-citation" id="modal-citation"></p><h3>How the report uses it</h3><p id="modal-use"></p><div class="modal-actions"><a class="btn primary" id="modal-link" href="#" target="_blank" rel="noopener noreferrer">Open original source <span aria-hidden="true">↗</span></a><button class="btn" id="copy-citation">Copy reference</button></div><div class="source-host" id="modal-host"></div><p class="modal-notice">Cited in the supplied draft. Not independently reverified during this website build. A source link is not proof that every associated claim is correct.</p></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>'use strict';
+/* All content is local. No API keys, tracking, external fonts, or runtime dependencies.
+   Research claims are transcribed/adapted from the supplied report, not freshly verified.
+   Edit the content objects below to update the study. */
+const SOURCES = [
+  {
+    "id": 1,
+    "title": "Prime membership & video",
+    "category": "Company",
+    "citation": "Amazon. (n.d.). Is Prime Video included with Amazon Prime? Prime Video.",
+    "url": "https://www.primevideo.com/help?nodeId=GD5REBNJD74BURF6",
+    "use": "Bundled value in the Prime Video comparison."
+  },
+  {
+    "id": 2,
+    "title": "Prime Video AI recaps",
+    "category": "Company",
+    "citation": "Amazon Staff. (2024, November 4). Prime Video's new feature uses generative AI to recap what you're watching. About Amazon.",
+    "url": "https://www.aboutamazon.com/news/entertainment/amazon-prime-video-x-ray-recaps",
+    "use": "The reported 2024 US beta of AI-generated viewing recaps."
+  },
+  {
+    "id": 3,
+    "title": "Brazil: international data transfers",
+    "category": "Government",
+    "citation": "Autoridade Nacional de Proteção de Dados. (2024, August 23). Resolução CD/ANPD nº 19, de 23 de agosto de 2024 [Resolution on international data transfers].",
+    "url": "https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/atos-normativos/regulamentacoes_anpd/resolucao-cd-anpd-no-19-de-23-de-agosto-de-2024",
+    "use": "Rules and safeguards for sharing personal data across borders."
+  },
+  {
+    "id": 4,
+    "title": "YouTube’s AI creation tools",
+    "category": "Company",
+    "citation": "Berrada, D. (2025, September 16). Unpacking the magic of our new creative tools. YouTube Blog.",
+    "url": "https://blog.youtube/news-and-events/generative-ai-creation-tools-made-on-youtube-2025/",
+    "use": "The reported introduction of video-generation tools for Shorts."
+  },
+  {
+    "id": 5,
+    "title": "Claro’s Netflix packages",
+    "category": "Company",
+    "citation": "Claro. (n.d.). Plano de TV com Netflix: Assine e ative [TV plan with Netflix: Subscribe and activate]. Retrieved October 25, 2026, from",
+    "url": "https://www.claro.com.br/netflix",
+    "use": "The existing distribution relationship and combined billing offer."
+  },
+  {
+    "id": 6,
+    "title": "Disney+ and its franchises",
+    "category": "Company",
+    "citation": "Disney+. (n.d.). About Disney+. Disney Plus Press.",
+    "url": "https://press.disneyplus.com/about",
+    "use": "Content brands that give viewers reasons to subscribe."
+  },
+  {
+    "id": 7,
+    "title": "Netflix’s recommendation model",
+    "category": "Company",
+    "citation": "Hsiao, K.-J., Feng, Y., & Lamkhede, S. (2025, March 21). Foundation model for personalized recommendation. Netflix TechBlog.",
+    "url": "https://netflixtechblog.com/foundation-model-for-personalized-recommendation-1a0bd8e02d39",
+    "use": "The report’s technical basis for learning, discovery, and shared recommendation infrastructure."
+  },
+  {
+    "id": 8,
+    "title": "India: data protection rules",
+    "category": "Government",
+    "citation": "Ministry of Electronics & IT. (2025, November 14). Government notifies DPDP rules to empower citizens and protect privacy. Press Information Bureau.",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190014",
+    "use": "The report’s discussion of phased consent and security requirements."
+  },
+  {
+    "id": 9,
+    "title": "India: creative-technology training",
+    "category": "Government",
+    "citation": "Ministry of Information & Broadcasting. (2026, August 26). IICT and Netflix to support next generation of Indian storytellers through scholarships across 6 programs. Press Information Bureau.",
+    "url": "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2303457&lang=2&reg=48",
+    "use": "The reported IICT and Netflix scholarship partnership."
+  },
+  {
+    "id": 10,
+    "title": "Netflix in Brazil",
+    "category": "Company",
+    "citation": "Netflix. (n.d.-a). Netflix Brazil. Retrieved October 25, 2026, from",
+    "url": "https://www.netflix.com/br-en/",
+    "use": "The subscription service and cancellation flexibility cited in the report."
+  },
+  {
+    "id": 11,
+    "title": "Netflix investor questions",
+    "category": "Company",
+    "citation": "Netflix. (n.d.-b). Top investor questions. Retrieved October 25, 2026, from",
+    "url": "https://ir.netflix.net/ir-overview/top-investor-questions/",
+    "use": "Advertising-market availability as recorded in the supplied report."
+  },
+  {
+    "id": 12,
+    "title": "Netflix 2025 annual report",
+    "category": "Company",
+    "citation": "Netflix. (2026a). Annual report for the fiscal year ended December 31, 2025 [Form 10-K]. U.S. Securities and Exchange Commission.",
+    "url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/nflx-20251231.htm",
+    "use": "Content costs, cloud dependence, and the historical Brazilian tax charge cited in the draft."
+  },
+  {
+    "id": 13,
+    "title": "Netflix’s Brazilian production network",
+    "category": "Company",
+    "citation": "Netflix. (2026b, January 27). Netflix kicks off 15-year anniversary celebrations in Brazil with new office and visit from co-CEO Greg Peters.",
+    "url": "https://about.netflix.com/en/news/netflix-kicks-off-15-year-anniversary-celebrations-in-brazil-with-new-office",
+    "use": "The reported work with more than 40 Brazilian production companies."
+  },
+  {
+    "id": 14,
+    "title": "Netflix advertising tools",
+    "category": "Company",
+    "citation": "Netflix. (2026c, May 13). Netflix Upfront 2026: Get closer.",
+    "url": "https://about.netflix.com/en/news/netflix-upfront-2026-get-closer",
+    "use": "The report’s discussion of AI-supported media planning and ad buying."
+  },
+  {
+    "id": 15,
+    "title": "Netflix Q3 2026 shareholder letter",
+    "category": "Company",
+    "citation": "Netflix. (2026d, October 20). Q3 2026 letter to shareholders.",
+    "url": "https://s22.q4cdn.com/959853165/files/doc_financials/2026/q3/FINAL-Q3-26-Shareholder-Letter.pdf",
+    "use": "The report’s figures for growth in India and the advertising outlook. These are carried over from the draft, not freshly verified."
+  },
+  {
+    "id": 16,
+    "title": "US trade policy report",
+    "category": "Government",
+    "citation": "Office of the United States Trade Representative. (2026, February). 2026 trade policy agenda and 2025 annual report.",
+    "url": "https://ustr.gov/sites/default/files/files/Press/Releases/2026/2026%20Trade%20Policy%20Agenda%202025%20Annual%20Report.pdf",
+    "use": "The report’s comparison of digital trade and geopolitical exposure."
+  },
+  {
+    "id": 17,
+    "title": "Disney’s advertising technology",
+    "category": "Company",
+    "citation": "The Walt Disney Company. (2025, January 9). At Global Tech & Data Showcase, Disney Advertising charts the future of transformative innovation.",
+    "url": "https://thewaltdisneycompany.com/news/tech-data-showcase-disney-advertising/",
+    "use": "The machine-learning advertising capability cited in the competitor comparison."
+  },
+  {
+    "id": 18,
+    "title": "World Development Indicators",
+    "category": "Data",
+    "citation": "World Bank. (n.d.). World development indicators [Data set]. Retrieved October 25, 2026, from",
+    "url": "https://databank.worldbank.org/source/world-development-indicators",
+    "use": "The 2024 population, GDP per capita, and internet-use values transcribed from the supplied report."
+  }
+];
+const ECONOMICS = {
+  value: {
+    title: 'A better pick. A reason to stay.',
+    evidence: 'The report describes Netflix learning from viewing behaviour to improve recommendations. It also cites AI tools for advertising planning and buying.',
+    analysis: 'Finding something enjoyable sooner could make a subscription feel more worthwhile. Better campaign results could make advertising space more valuable.',
+    steps: [['Better discovery', 'Help viewers find relevant titles.'], ['A more useful service', 'Give households a reason to keep watching.'], ['Potential financial value', 'Test retention and advertising income.']],
+    caution: 'More viewing does not prove customers will accept a higher price—or that advertisers will pay more.',
+    sources: [7, 14]
+  },
+  cost: {
+    title: 'Faster tasks. Not free content.',
+    evidence: 'Netflix’s engineers are cited on the maintenance burden of separate recommendation models. The report records $16.4 billion of content amortization against $23.3 billion in cost of revenue in 2025.',
+    analysis: 'Shared AI infrastructure may reduce duplicated work. But Netflix still pays for content, computing, human review, and delivery. Measure total cost per retained customer.',
+    steps: [['Share the AI infrastructure', 'Reduce duplicated model maintenance.'], ['Count the remaining costs', 'Content, computing, checks, and delivery.'], ['Test the full economics', 'A faster task is not automatically a cheaper service.']],
+    caution: 'Content amortization means content costs recognized over time. An improved algorithm does not remove those commitments.',
+    sources: [7, 12]
+  },
+  switching: {
+    title: 'A preference is not a lock-in.',
+    evidence: 'The report notes that familiar profiles and recommendations create some inconvenience when leaving, but Netflix advertises cancellation at any time.',
+    analysis: 'AI may make customers prefer Netflix. It does not stop them cancelling, subscribing to a rival, or returning only when a new show arrives.',
+    steps: [['A familiar profile', 'Recommendations become more personal.'], ['An easy alternative', 'Households can switch or use several services.'], ['Limited pricing protection', 'A price increase still needs a strong value case.']],
+    caution: 'Switching costs are the difficulty of leaving—not simply how much someone likes the service.',
+    sources: [10]
+  },
+  learning: {
+    title: 'Learn from viewing. Not just size.',
+    evidence: 'The report’s technical source describes learning from viewing interactions and emphasizes the usefulness of data, not just its volume.',
+    analysis: 'Netflix can spread AI development costs and learn across its service. But useful feedback, experimentation, content rights, and local relevance matter more than the model alone.',
+    steps: [['Useful viewing feedback', 'Observe what audiences enjoy.'], ['Learning and testing', 'Improve how relevant titles are discovered.'], ['A potentially better service', 'Evaluate the result with real customers.']],
+    caution: 'This is a learning effect, not a direct social network effect. Another subscriber does not automatically make your Netflix more valuable.',
+    sources: [7]
+  },
+  boundaries: {
+    title: 'The competition is bigger than streaming.',
+    evidence: 'The report cites YouTube’s introduction of free AI video-generation tools for Shorts in selected markets in 2025.',
+    analysis: 'Easier creation could increase the entertainment competing for attention. Netflix also competes for advertising budgets, not just paid subscriptions.',
+    steps: [['Easier video creation', 'More people can produce entertainment.'], ['More competition for attention', 'Viewers have other ways to spend their time.'], ['A wider competitive field', 'Subscriptions, attention, and ad budgets.']],
+    caution: 'The report does not establish that AI-generated videos have caused Netflix cancellations.',
+    sources: [4, 14]
+  }
+};
+const COMPETITORS = {
+  netflix: {
+    evidence: 'The report cites a shared recommendation model, AI-supported media planning, viewing histories, content rights, and distribution relationships.',
+    implication: 'Netflix can combine these assets to make its service more useful. The stronger claim is about the whole system—not an AI feature that rivals can imitate.',
+    sources: [7, 14]
+  },
+  amazon: {
+    evidence: 'Prime Video introduced AI-generated recaps in a US beta in 2024. Eligible Prime memberships also include selected video titles, according to the sources cited in the report.',
+    implication: 'Netflix has to justify a separate entertainment subscription against Prime’s bundled value. Convenience features alone are unlikely to create a lasting distinction.',
+    sources: [1, 2]
+  },
+  disney: {
+    evidence: 'The report cites Disney’s Select AI Engine for advertising audiences and its established content brands, including Disney, Pixar, Marvel, and Star Wars.',
+    implication: 'Netflix faces capable advertising rivals. It also needs shows people actively seek out: good recommendations cannot substitute for desirable content.',
+    sources: [6, 17]
+  }
+};
+const ECOSYSTEM = {
+  creators: {title:'Creators & rights holders',tag:'The content relationship',receive:'Movies, series, and permission to stream them.',give:'Production funding and licensing payments.',meaning:'Distinctive content remains valuable even when AI tools become easier to obtain. Popular producers can negotiate higher fees.',sources:[12]},
+  aws: {title:'AWS: supplier and rival',tag:'The strategic tension',receive:'Cloud computing and infrastructure that support the platform.',give:'Payments for technology services.',meaning:'Amazon competes through Prime Video while supplying Netflix through AWS. The report says switching cloud providers would be difficult. This is dependence—not evidence of misuse of Netflix data.',sources:[12]},
+  viewers: {title:'Viewers & households',tag:'The customer relationship',receive:'Subscription income and viewing feedback.',give:'Entertainment, access to the catalogue, and personalized recommendations.',meaning:'Useful feedback can support learning, but easy cancellation limits lock-in. A better experience must still be worth the price.',sources:[7,10]},
+  advertisers: {title:'Advertisers',tag:'The second customer group',receive:'Campaign materials and payments for advertising.',give:'Advertising space, audience access, and campaign services on the ad-supported offering.',meaning:'AI could help improve advertising value. Advertisers need results that justify their spending; product announcements alone do not prove those results.',sources:[14]},
+  claro: {title:'Claro & distribution partners',tag:'The route to more customers',receive:'Customer access through packages and help with billing.',give:'Access to Netflix’s service and commercial payments under the partnership.',meaning:'A partner may make subscribing easier but can negotiate a larger share of value. Claro also offers competing services; the relationship is not exclusive.',sources:[5]},
+  regulators: {title:'Regulators',tag:'The rules of the system',receive:'Requirements governing privacy, data use, and cross-border transfers.',give:'Compliance and information required by authorities—not a commercial payment for rules.',meaning:'Legal access to relevant data shapes how Netflix can learn across markets. Population size alone does not create usable training data.',sources:[3,8]}
+};
+const METRICS = {
+  population: {brazil:212.0,india:1450.9,brText:'212M',inText:'1.45B',label:'People · 2024',scale:1450.9,note:'India offers a much larger potential audience. Population is not a measure of paying demand. Bars use a common zero-based scale; values are rounded. Indicator: SP.POP.TOTL.'},
+  gdp: {brazil:10310.5,india:2592.0,brText:'$10,311',inText:'$2,592',label:'GDP per capita · current US$ · 2024',scale:10310.5,note:'Brazil’s higher GDP per capita suggests greater average spending capacity, not actual household income or Netflix willingness to pay. Both bars start at zero. Indicator: NY.GDP.PCAP.CD.'},
+  internet: {brazil:84.5,india:64.9,brText:'84.5%',inText:'64.9%',label:'Individuals using the internet · 2024',scale:100,note:'Internet use indicates digital reach, not connection speed or streaming quality. Both bars use a 0–100% scale. Indicator: IT.NET.USER.ZS.'}
+};
+const COUNTRIES = {
+  market:{br:'The report records an existing Netflix advertising-supported plan and Claro packages. This creates a route to combine a lower subscription price with advertising revenue.',india:'The report records no ad-supported plan in its listed Indian markets. It cites approximately 18% revenue growth excluding currency effects and 24% viewing-hour growth in Q3 2026, plus local content and a Flipkart partnership. These draft figures require checking in the linked letter.',brSources:[5,11],inSources:[11,15]},
+  data:{br:'Higher measured internet use supports reach. Netflix still needs useful local viewing feedback and lawful arrangements for transferring personal data internationally.',india:'A large audience and different language markets create opportunities for better discovery. Global viewing patterns alone cannot tell Netflix what every local audience wants.',brSources:[3,18],inSources:[8,18]},
+  talent:{br:'The report cites Netflix working with more than 40 Brazilian production companies over three years. Local language and quality review are important complements to shared AI engineering.',india:'The report cites Netflix and the Indian Institute of Creative Technologies offering scholarships across six programs. This supports creative and technical training; it does not establish that AI specialists are better or cheaper than Brazil’s.',brSources:[13],inSources:[9]},
+  rules:{br:'The report cites international-transfer safeguards and a $619 million cumulative loss recognized in 2025 over past Brazilian non-income tax assessments. That historical charge is not an annual forecast.',india:'The report cites 2025 data protection rules with an 18-month phased implementation timetable. Netflix would need to prepare for consent and security requirements. Check the original rule and its applicable dates.',brSources:[3,12],inSources:[8]},
+  geo:{br:'The report cites a US digital-trade dispute involving Brazil. Wider disputes could affect platforms, payments, or data flows, but this is a risk scenario—not evidence of a current Netflix restriction.',india:'The report cites a US trade-negotiation framework involving technology and export-control cooperation. This is geopolitical context, not proof of lower Netflix costs or guaranteed market access.',brSources:[16],inSources:[16]}
+};
+const MODES = {
+  alliance:{up:'Build on Claro’s existing packages and combined billing. Compared with acquiring a company, a contractual alliance commits less capital and adds a customer channel beyond Netflix’s own marketing.',down:'Keep control of the app, content, and recommendations, and limit data sharing. Test whether customers are genuinely additional and retained. Partner demands and direct subscribers moving to lower-margin plans can erode the benefit.'},
+  direct:{up:'Use Netflix’s own customer relationship and channels rather than relying only on a distribution partner. This is the alternative considered alongside the Claro alliance.',down:'The report argues that direct marketing alone would not use Claro’s established customer access and billing channel. It does not provide acquisition-cost data proving which route is cheaper.'},
+  acquisition:{up:'Ownership is an alternative to a contractual alliance, but the report does not identify an acquisition target or a verified need to buy one.',down:'A purchase commits more capital and makes it harder to adjust the investment. The report prefers a flexible alliance while advertising, retention, taxes, and data-sharing economics remain uncertain.'}
+};
+const PRESETS = {
+  balanced:{subscription:1.50,advertising:0.80,partner:0.45,service:0.30,migration:0.25,ai:0.40},
+  weak:{subscription:0.80,advertising:0.10,partner:0.65,service:0.40,migration:0.50,ai:0.60},
+  strong:{subscription:2.40,advertising:1.20,partner:0.45,service:0.40,migration:0.15,ai:0.45}
+};
+const QUESTIONS = [
+ {q:'More viewing hours prove customers will pay a higher subscription price. True or false?',options:['True. Engagement and willingness to pay are the same.','False. Higher willingness to pay needs its own evidence.','True, as long as AI made the recommendations.'],correct:1,why:'More viewing may help retention, but the report does not treat it as proof that people accept a higher price. Content and affordability still matter.'},
+ {q:'Why is AWS important to Netflix’s strategic position?',options:['Amazon is both a cloud supplier and a streaming competitor.','AWS makes it impossible for Netflix customers to cancel.','AWS proves Amazon can access Netflix’s viewing data.'],correct:0,why:'The report identifies Amazon as both supplier and rival. It discusses cloud dependence; it does not establish access to Netflix’s confidential customer data.'},
+ {q:'What would justify scaling the proposed strategy?',options:['More viewing, regardless of costs.','A bigger subscriber total, even if customers are less satisfied.','Credible financial gains in both tests, with no worse customer outcomes.'],correct:2,why:'The recommendation is conditional on the economics and the customer experience. AI and partnership changes need separate tests, and all relevant costs count.'}
+];
+
+const $ = (selector, root=document) => root.querySelector(selector);
+const $$ = (selector, root=document) => [...root.querySelectorAll(selector)];
+const sourceLabel = id => String(id).padStart(2,'0');
+const money = number => '$' + Number(number).toFixed(2);
+const esc = value => String(value).replace(/[&<>"']/g, character=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+function sourcesMarkup(ids) {
+ return '<div class="source-row"><span class="label">REPORT SOURCES</span>'+ids.map(id=>`<button class="chip" data-source="${id}" aria-label="Read source ${sourceLabel(id)}: ${esc(SOURCES[id-1].title)}">[${sourceLabel(id)}] ${esc(SOURCES[id-1].title)} ↗</button>`).join('')+'</div>';
+}
+function refresh(element) {
+ element.classList.remove('refresh');
+ void element.offsetWidth;
+ element.classList.add('refresh');
+}
+function renderEconomics(key) {
+ const data=ECONOMICS[key];
+ if(!data) return;
+ $$('.econ-tab').forEach(button=>{const selected=button.dataset.lens===key;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1;});
+ const panel=$('#econ-panel');
+ panel.setAttribute('aria-labelledby','econ-'+key);
+ panel.innerHTML=`<div class="econ-story"><span class="badge">Reported evidence</span><h3>${data.title}</h3><p>${data.evidence}</p><p class="interpretation"><strong>The research judgment:</strong> ${data.analysis}</p>${sourcesMarkup(data.sources)}</div><div class="econ-visual"><div>${data.steps.map((step,i)=>`${i?'<div class="flow-arrow" aria-hidden="true">↓</div>':''}<div class="flow-step"><span class="step-num" aria-hidden="true">${i+1}</span><div><h4>${step[0]}</h4><p>${step[1]}</p></div></div>`).join('')}</div><p class="caution"><strong>The limit:</strong> ${data.caution}</p></div>`;
+ refresh(panel);
+}
+function renderCompetitor(key) {
+ const data=COMPETITORS[key]; if(!data) return;
+ $$('.competitor-card').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.company===key)));
+ const panel=$('#rival-details');
+ panel.innerHTML=`<div><h4>What the report cites</h4><p>${data.evidence}</p>${sourcesMarkup(data.sources)}</div><div><h4>What it means for Netflix · analysis</h4><p>${data.implication}</p></div>`;
+ refresh(panel);
+}
+function renderEcosystem(key) {
+ const data=ECOSYSTEM[key];if(!data) return;
+ $$('.eco-node').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.actor===key)));
+ const panel=$('#eco-detail');
+ panel.innerHTML=`<span class="badge analysis">${data.tag}</span><h3>${data.title}</h3><div class="exchange"><span class="label">Netflix receives</span><p>${data.receive}</p></div><div class="exchange"><span class="label">Netflix gives</span><p>${data.give}</p></div><div class="exchange takeaway"><span class="label">Why it matters · analysis</span><p>${data.meaning}</p></div>${sourcesMarkup(data.sources)}`;
+ refresh(panel);
+}
+function renderMetric(key) {
+ const data=METRICS[key];if(!data)return;
+ $$('[data-metric]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.metric===key)));
+ $('#br-value').textContent=data.brText;$('#in-value').textContent=data.inText;
+ $('#br-label').textContent=data.label;$('#in-label').textContent=data.label;
+ $('#br-bar').style.width=(data.brazil/data.scale*100)+'%';$('#in-bar').style.width=(data.india/data.scale*100)+'%';
+ $('#metric-note').textContent=data.note;
+}
+function renderCountry(key) {
+ const data=COUNTRIES[key];if(!data) return;
+ $$('[data-country-lens]').forEach(button=>{const selected=button.dataset.countryLens===key;button.setAttribute('aria-selected',String(selected));button.tabIndex=selected?0:-1;});
+ const panel=$('#country-context');panel.setAttribute('aria-labelledby','country-'+key);
+ panel.innerHTML=`<div><h4 class="green">BRAZIL / REPORT EVIDENCE & INTERPRETATION</h4><p>${data.br}</p>${sourcesMarkup(data.brSources)}</div><div><h4 style="color:var(--blue)">INDIA / REPORT EVIDENCE & INTERPRETATION</h4><p>${data.india}</p>${sourcesMarkup(data.inSources)}</div>`;
+ refresh(panel);
+}
+function renderMode(key) {
+ const data=MODES[key];if(!data)return;
+ $$('[data-mode]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===key)));
+ $('#mode-details').innerHTML=`<div><span class="label">The rationale · analysis</span><p>${data.up}</p></div><div><span class="label">The trade-off · analysis</span><p>${data.down}</p></div>`;
+ refresh($('#mode-details'));
+}
+// Arithmetic uses integer cents to avoid floating-point rounding artifacts.
+const sliderNames=['subscription','advertising','partner','service','migration','ai'];
+function readScenario() {
+ const values={};sliderNames.forEach(key=>values[key]=Math.round(Number($('#'+key).value)*100));
+ const revenue=values.subscription+values.advertising;
+ const costs=values.partner+values.service+values.migration+values.ai;
+ return {values,revenue,costs,net:revenue-costs,customerSafe:$('#experience').checked};
+}
+function updateLab() {
+ const scenario=readScenario();
+ sliderNames.forEach(key=>{$('#'+key+'-output').textContent=money(scenario.values[key]/100);$('#'+key).setAttribute('aria-valuetext',money(scenario.values[key]/100)+' per household per month');});
+ const net=scenario.net/100;
+ $('#net-value').textContent=(net>0?'+':net<0?'−':'')+money(Math.abs(net));
+ $('#revenue-sum').textContent='+'+money(scenario.revenue/100);
+ $('#cost-sum').textContent='−'+money(scenario.costs/100);
+ $('#lab-output').classList.toggle('negative',net<0||!scenario.customerSafe);
+ if(!scenario.customerSafe){
+  $('#lab-verdict').textContent='Fix customer harm first.';
+  $('#lab-explanation').textContent='The report’s safeguard fails even if this scenario earns more. Improve the offer and retest; a positive number does not justify a worse customer experience.';
+ }else if(net>0){
+  $('#lab-verdict').textContent='Worth testing—not proven.';
+  $('#lab-explanation').textContent='These invented inputs produce a positive contribution change. Real investment still needs credible results from both controlled tests, full costs, and no worse customer outcomes.';
+ }else if(net<0){
+  $('#lab-verdict').textContent='Rework the offer.';
+  $('#lab-explanation').textContent='Costs and losses outweigh the extra income in this scenario. Change the economics or reconsider the allocation. This alone does not prove India would be more profitable.';
+ }else{
+  $('#lab-verdict').textContent='Break-even is not a green light.';
+  $('#lab-explanation').textContent='These inputs leave no additional contribution. The report calls for credible financial gains, not just covering costs. Revise the offer before making a larger commitment.';
+ }
+}
+function loadPreset(name) {
+ const data=PRESETS[name];if(!data)return;
+ sliderNames.forEach(key=>$('#'+key).value=String(data[key]));
+ $$('[data-preset]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.preset===name)));
+ $('#experience').checked=true;updateLab();
+}
+function downloadText(filename,text,type='text/plain;charset=utf-8') {
+ const blob=new Blob([text],{type});
+ const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(url),1500);
+}
+function exportScenario() {
+ const s=readScenario();
+ const rows=[['NEXTPLAY illustrative scenario','NOT NETFLIX DATA OR A FORECAST'],['Basis','US dollars per eligible household per month versus the existing offer'],['Subscription revenue gain',(s.values.subscription/100).toFixed(2)],['Advertising revenue gain',(s.values.advertising/100).toFixed(2)],['Partner payments',(s.values.partner/100).toFixed(2)],['Delivery service and tax costs',(s.values.service/100).toFixed(2)],['Direct-plan migration losses',(s.values.migration/100).toFixed(2)],['AI development and rollout allocation',(s.values.ai/100).toFixed(2)],['Additional revenue',(s.revenue/100).toFixed(2)],['Additional costs and losses',(s.costs/100).toFixed(2)],['Net contribution change',(s.net/100).toFixed(2)],['Customer experience assumed not worse',s.customerSafe?'Yes':'No'],['Interpretation',$('#lab-verdict').textContent],['Limits','Illustrative arithmetic; no empirical Netflix inputs or statistical inference. Separate experiments are still required.']];
+ const csv=rows.map(row=>row.map(value=>'"'+String(value).replace(/"/g,'""')+'"').join(',')).join('\r\n');
+ downloadText('nextplay-illustrative-scenario.csv',csv,'text/csv;charset=utf-8');toast('Illustrative assumptions exported.');
+}
+// Quiz: no account, local storage, cookies, or server-side score collection.
+let quizIndex=0,quizScore=0,quizAnswered=false;
+function renderQuiz(moveFocus=false) {
+ const box=$('#quiz-box');quizAnswered=false;
+ if(quizIndex>=QUESTIONS.length){
+  box.innerHTML=`<div class="quiz-progress" aria-hidden="true"><span class="done"></span><span class="done"></span><span class="done"></span></div><span class="question-number">BOARDROOM CHECK / COMPLETE</span><div class="quiz-score">${quizScore}<span style="font-size:28px;color:var(--muted)"> / 3</span></div><h3 id="quiz-question" tabindex="-1">${quizScore===3?'You’ve got the thesis.':'Keep the evidence and assumptions separate.'}</h3><p class="quiz-feedback">AI can improve the service, but the durable advantage depends on content, data, and distribution. Test the economics before committing to the growth plan.</p><button class="btn small-btn quiz-next" id="quiz-restart">Try again <span aria-hidden="true">↻</span></button>`;
+ }else{
+  const q=QUESTIONS[quizIndex];
+  box.innerHTML=`<div class="quiz-progress" aria-hidden="true">${QUESTIONS.map((_,i)=>`<span class="${i<=quizIndex?'done':''}"></span>`).join('')}</div><span class="question-number">QUESTION ${quizIndex+1} OF ${QUESTIONS.length}</span><h3 id="quiz-question" tabindex="-1">${q.q}</h3><div class="quiz-options">${q.options.map((answer,i)=>`<button class="quiz-option" data-answer="${i}"><span class="letter" aria-hidden="true">${String.fromCharCode(65+i)}</span><span>${answer}</span></button>`).join('')}</div><div id="quiz-feedback"></div>`;
+ }
+ if(moveFocus) $('#quiz-question').focus({preventScroll:true});
+}
+function answerQuiz(index) {
+ if(quizAnswered||quizIndex>=QUESTIONS.length)return;
+ quizAnswered=true;const q=QUESTIONS[quizIndex],correct=index===q.correct;
+ if(correct)quizScore++;
+ $$('.quiz-option').forEach(button=>{button.disabled=true;if(Number(button.dataset.answer)===q.correct)button.classList.add('correct');else if(Number(button.dataset.answer)===index)button.classList.add('wrong');});
+ $('#quiz-feedback').innerHTML=`<p class="quiz-feedback"><strong style="color:${correct?'var(--lime)':'var(--gold)'}">${correct?'Correct.':'Not quite.'}</strong> ${q.why}</p><button class="btn small-btn quiz-next" id="quiz-next">${quizIndex===QUESTIONS.length-1?'See your result':'Next question'} <span aria-hidden="true">→</span></button>`;
+ $('#quiz-next').focus({preventScroll:true});
+}
+// Source library filters only local, trusted strings.
+let sourceFilter='All',showAllSources=false,currentSource=null,toastTimer=null;
+function renderSources() {
+ const term=$('#source-search').value.trim().toLowerCase();
+ const matches=SOURCES.filter(source=>(sourceFilter==='All'||source.category===sourceFilter)&&[source.title,source.citation,source.use,source.url].join(' ').toLowerCase().includes(term));
+ const expanded=showAllSources||sourceFilter!=='All'||term.length>0;
+ const visible=expanded?matches:matches.slice(0,6);
+ $('#sources-grid').innerHTML=visible.map(source=>`<button class="source-card" data-source="${source.id}" aria-label="Read reference ${sourceLabel(source.id)}: ${esc(source.title)}"><span class="source-meta"><span class="source-no">[${sourceLabel(source.id)}]</span><span>${esc(source.category.toUpperCase())}</span></span><h3>${esc(source.title)}</h3><span class="source-description">${esc(source.use)}</span><span class="source-link">View citation & original source ↗</span></button>`).join('');
+ $('#source-empty').hidden=matches.length>0;
+ $('#source-count').textContent=`Showing ${visible.length} of ${matches.length} ${matches.length===1?'reference':'references'}${sourceFilter!=='All'?' · '+sourceFilter:''}`;
+ $('#show-sources').hidden=sourceFilter!=='All'||term.length>0||matches.length<=6;
+ $('#show-sources').innerHTML=showAllSources?'Show fewer <span aria-hidden="true">−</span>':'Show all 18 <span aria-hidden="true">+</span>';
+}
+function openSource(id) {
+ const source=SOURCES.find(source=>source.id===id);if(!source)return;
+ currentSource=source;
+ $('#modal-meta').textContent='REFERENCE '+sourceLabel(id)+' / '+source.category.toUpperCase();
+ $('#modal-title').textContent=source.title;$('#modal-citation').textContent=source.citation;
+ $('#modal-use').textContent=source.use;$('#modal-link').href=source.url;
+ $('#modal-host').textContent=new URL(source.url).hostname;
+ $('#copy-citation').textContent='Copy reference';
+ const modal=$('#source-modal');
+ if(!modal.open)modal.showModal();
+ document.body.style.overflow='hidden';
+}
+async function copyReference() {
+ if(!currentSource)return;
+ const text=currentSource.citation+' '+currentSource.url;
+ try{
+  if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);}
+  else{
+   const area=document.createElement('textarea');area.value=text;area.setAttribute('readonly','');area.style.position='fixed';area.style.opacity='0';$('#source-modal .modal-content').appendChild(area);area.select();
+   const copied=document.execCommand('copy');area.remove();if(!copied)throw new Error('Clipboard unavailable');
+  }
+  $('#copy-citation').textContent='Copied';toast('Reference copied.');
+ }catch(_error){
+  downloadText('reference-'+sourceLabel(currentSource.id)+'.txt',text+'\n');toast('Clipboard unavailable. Reference downloaded instead.');
+ }
+}
+function downloadReferences() {
+ const intro='NEXTPLAY — References from the supplied research draft\nResearch snapshot: 25 October 2026. Country data: 2024.\nNot independently reverified for this website.\n\n';
+ downloadText('nextplay-references.txt',intro+SOURCES.map(source=>'['+sourceLabel(source.id)+'] '+source.citation+' '+source.url).join('\n\n')+'\n');
+}
+function toast(message) {
+ const element=$('#toast');element.textContent=message;element.classList.add('visible');
+ clearTimeout(toastTimer);toastTimer=setTimeout(()=>element.classList.remove('visible'),2800);
+}
+// Native buttons remain keyboard accessible; tablists also support arrow/Home/End keys.
+$$('[role="tablist"]').forEach(tablist=>tablist.addEventListener('keydown',event=>{
+ const tabs=$$('[role="tab"]',tablist),current=tabs.indexOf(document.activeElement);
+ if(current<0)return;
+ let next=current;
+ if(event.key==='ArrowRight')next=(current+1)%tabs.length;
+ else if(event.key==='ArrowLeft')next=(current-1+tabs.length)%tabs.length;
+ else if(event.key==='Home')next=0;else if(event.key==='End')next=tabs.length-1;else return;
+ event.preventDefault();tabs[next].focus();tabs[next].click();
+}));
+document.addEventListener('click',event=>{
+ const target=event.target.closest('button');
+ if(!target)return;
+ if(target.dataset.lens)renderEconomics(target.dataset.lens);
+ else if(target.dataset.company)renderCompetitor(target.dataset.company);
+ else if(target.dataset.actor)renderEcosystem(target.dataset.actor);
+ else if(target.dataset.metric)renderMetric(target.dataset.metric);
+ else if(target.dataset.countryLens)renderCountry(target.dataset.countryLens);
+ else if(target.dataset.mode)renderMode(target.dataset.mode);
+ else if(target.dataset.preset)loadPreset(target.dataset.preset);
+ else if(target.dataset.source)openSource(Number(target.dataset.source));
+ else if(target.dataset.answer!==undefined)answerQuiz(Number(target.dataset.answer));
+ else if(target.dataset.filter){sourceFilter=target.dataset.filter;$$('[data-filter]').forEach(button=>button.setAttribute('aria-pressed',String(button===target)));renderSources();}
+ else if(target.id==='quiz-next'){quizIndex++;renderQuiz(true);}
+ else if(target.id==='quiz-restart'){quizIndex=0;quizScore=0;renderQuiz(true);}
+});
+sliderNames.forEach(key=>$('#'+key).addEventListener('input',()=>{$$('[data-preset]').forEach(button=>button.setAttribute('aria-pressed','false'));updateLab();}));
+$('#experience').addEventListener('change',updateLab);
+$('#reset-lab').addEventListener('click',()=>loadPreset('balanced'));
+$('#export-scenario').addEventListener('click',exportScenario);
+$('#source-search').addEventListener('input',renderSources);
+$('#show-sources').addEventListener('click',()=>{const collapsing=showAllSources;showAllSources=!showAllSources;renderSources();if(collapsing)$('#source-search').scrollIntoView({block:'center',behavior:'smooth'});});
+$('#download-references').addEventListener('click',downloadReferences);
+$('#modal-close').addEventListener('click',()=>$('#source-modal').close());
+$('#source-modal').addEventListener('close',()=>document.body.style.overflow='');
+$('#source-modal').addEventListener('click',event=>{if(event.target===$('#source-modal')){const rect=$('#source-modal').getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)$('#source-modal').close();}});
+$('#copy-citation').addEventListener('click',copyReference);
+const menuToggle=$('#menu-toggle'),navLinks=$('#nav-links');
+menuToggle.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')!=='true';menuToggle.setAttribute('aria-expanded',String(open));navLinks.classList.toggle('open',open);});
+$$('a',navLinks).forEach(link=>link.addEventListener('click',()=>{menuToggle.setAttribute('aria-expanded','false');navLinks.classList.remove('open');}));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&navLinks.classList.contains('open')){menuToggle.setAttribute('aria-expanded','false');navLinks.classList.remove('open');menuToggle.focus();}});
+let scrollPending=false;
+function updateScroll() {
+ const extent=document.documentElement.scrollHeight-window.innerHeight;
+ $('#reading-progress').style.width=(extent>0?Math.min(100,window.scrollY/extent*100):0)+'%';
+ const ids=['advantage','ecosystem','markets','lab','sources'];let active='';
+ ids.forEach(id=>{if($('#'+id).getBoundingClientRect().top<190)active=id;});
+ $$('.nav-links>a').forEach(link=>{const selected=link.hash==='#'+active;link.classList.toggle('active',selected);if(selected)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
+ scrollPending=false;
+}
+window.addEventListener('scroll',()=>{if(!scrollPending){scrollPending=true;requestAnimationFrame(updateScroll);}},{passive:true});
+window.addEventListener('resize',()=>{if(window.innerWidth>680){menuToggle.setAttribute('aria-expanded','false');navLinks.classList.remove('open');}updateScroll();});
+renderEconomics('value');renderCompetitor('netflix');renderEcosystem('aws');renderMetric('population');renderCountry('market');renderMode('alliance');loadPreset('balanced');renderQuiz();renderSources();updateScroll();
+</script>
+</body>
+</html>
